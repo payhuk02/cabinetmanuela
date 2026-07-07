@@ -122,6 +122,9 @@ const NewsDetail = () => {
           lang: pageLang,
           canonical,
           alternates,
+          publishedTime: article.published_date,
+          modifiedTime: article.published_date,
+          author: "Cabinet ROGER VANGAH",
           jsonLdId: "article-jsonld",
           jsonLd: {
             "@context": "https://schema.org",

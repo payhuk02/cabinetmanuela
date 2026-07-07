@@ -16,6 +16,12 @@ type SeoOptions = {
   canonical?: string;
   /** hreflang alternates. Include x-default for the canonical fallback. */
   alternates?: AlternateLink[];
+  /** Open Graph article:published_time */
+  publishedTime?: string;
+  /** Open Graph article:modified_time */
+  modifiedTime?: string;
+  /** Open Graph article:author */
+  author?: string;
 };
 
 const setMeta = (
@@ -109,6 +115,24 @@ export const applySeo = (opts: SeoOptions) => {
   void lang;
   setMeta('meta[property="og:locale"]', "property", "og:locale", "fr_FR");
 
+  // Article specific
+  const cleanupMeta = (selector: string) => {
+    document.head.querySelector(selector)?.remove();
+  };
+  if (type === "article") {
+    if (opts.publishedTime) setMeta('meta[property="article:published_time"]', "property", "article:published_time", opts.publishedTime);
+    else cleanupMeta('meta[property="article:published_time"]');
+    
+    if (opts.modifiedTime) setMeta('meta[property="article:modified_time"]', "property", "article:modified_time", opts.modifiedTime);
+    else cleanupMeta('meta[property="article:modified_time"]');
+    
+    if (opts.author) setMeta('meta[property="article:author"]', "property", "article:author", opts.author);
+    else cleanupMeta('meta[property="article:author"]');
+  } else {
+    cleanupMeta('meta[property="article:published_time"]');
+    cleanupMeta('meta[property="article:modified_time"]');
+    cleanupMeta('meta[property="article:author"]');
+  }
 
   // Twitter
   setMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
@@ -145,6 +169,9 @@ export const useSeo = (opts: SeoOptions | null) => {
     opts?.type,
     opts?.lang,
     opts?.canonical,
+    opts?.publishedTime,
+    opts?.modifiedTime,
+    opts?.author,
     JSON.stringify(opts?.alternates ?? null),
     JSON.stringify(opts?.jsonLd ?? null),
   ]);
