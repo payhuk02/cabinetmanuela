@@ -161,7 +161,11 @@
 }
 
 @layer utilities {
-  .bg-night { background: var(--gradient-night); }
+  .bg-night { 
+    background: var(--gradient-night); 
+    --primary-foreground: 36 33% 97%; /* Force white foreground on dark backgrounds */
+    --foreground: 36 33% 97%;
+  }
   .bg-gold { background: var(--gradient-gold); }
   .text-gold { color: hsl(var(--accent)); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }

@@ -61,9 +61,18 @@ export const NewsSection = ({
         </div>
 
         {items.length > 0 ? (
-          <div className="mt-16 grid md:grid-cols-3 gap-6 lg:gap-8">
-            {items.map((n) => (
-              <NewsCard key={n.key} item={n} readMoreLabel={readMoreLabel} href={n.href} />
+          <div
+            key={items.map((i) => i.key).join(",")}
+            className="mt-16 grid md:grid-cols-3 gap-6 lg:gap-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out fill-mode-both"
+          >
+            {items.map((n, i) => (
+              <div
+                key={n.key}
+                className="animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out fill-mode-both"
+                style={{ animationDelay: `${i * 100}ms` }}
+              >
+                <NewsCard item={n} readMoreLabel={readMoreLabel} href={n.href} />
+              </div>
             ))}
           </div>
         ) : (

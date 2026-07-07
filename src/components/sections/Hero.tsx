@@ -338,7 +338,7 @@ export const Hero = () => {
               <div key={`pic-${i}`} className={wrapperClass} style={wrapperStyle} aria-hidden="true">
                 <ResponsiveImage
                   data={s.picture}
-                  alt=""
+                  alt={s.title ? `Illustration pour ${s.title}` : "Cabinet ROGER VANGAH"}
                   sizes="100vw"
                   loading={i === 0 ? "eager" : "lazy"}
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -353,7 +353,7 @@ export const Hero = () => {
             <img
               key={`${s.image}-${i}`}
               src={s.image ?? undefined}
-              alt=""
+              alt={s.title ? `Illustration pour ${s.title}` : "Cabinet ROGER VANGAH"}
               aria-hidden="true"
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
@@ -431,7 +431,7 @@ export const Hero = () => {
             {/* Emblème RV transparent au centre */}
             <img
               src={rvEmblem}
-              alt=""
+              alt="Logo du Cabinet ROGER VANGAH"
               loading="eager"
               width={1024}
               height={1024}

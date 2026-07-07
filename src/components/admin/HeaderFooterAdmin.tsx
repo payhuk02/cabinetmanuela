@@ -40,6 +40,12 @@ const GROUPS: GroupDef[] = [
       { key: "footer.admin", label: "Lien « Administration »", defaultValue: "Administration" },
     ],
   },
+  {
+    label: "Options d'Apparence",
+    keys: [
+      { key: "settings.customCursor", label: "Curseur personnalisé ('true' pour activer, 'false' pour désactiver)", defaultValue: "true" },
+    ],
+  },
 ];
 
 export const HeaderFooterAdmin = () => (

@@ -161,8 +161,9 @@ export const buildLangAlternates = (
   path: string,
   _currentLang: "fr" | "en"
 ): { canonical: string; alternates: AlternateLink[] } => {
+  const siteUrl = import.meta.env.VITE_SITE_URL || "https://www.vangah-avocats.com";
   const origin =
-    typeof window !== "undefined" ? window.location.origin : "https://vangavo.lovable.app";
+    typeof window !== "undefined" ? window.location.origin : siteUrl;
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
   const frUrl = `${origin}${cleanPath}`;
   return {

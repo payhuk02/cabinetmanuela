@@ -320,7 +320,7 @@ export const TeamPagePreview = ({ lang, members }: Props) => {
                       <p className="mt-0.5 text-[11px] text-accent tracking-wide">{role}</p>
                     )}
                     <div className="mt-4">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1E40AF] text-white px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] font-bold">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-appointment text-white px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] font-bold">
                         {lang === "fr" ? "En savoir plus" : "Learn more"}
                         <ArrowRight className="h-3 w-3" />
                       </span>
@@ -358,7 +358,7 @@ export const TeamPagePreview = ({ lang, members }: Props) => {
             href={apptHref}
             target={apptIsExternal ? "_blank" : undefined}
             rel={apptIsExternal ? "noreferrer" : undefined}
-            className="inline-flex items-center gap-2 rounded-full bg-[#1E40AF] text-white px-4 py-2.5 text-[11px] uppercase tracking-[0.2em] shadow-elegant pointer-events-auto hover:bg-[#1E40AF]/90 transition-colors font-bold"
+            className="inline-flex items-center gap-2 rounded-full bg-appointment text-white px-4 py-2.5 text-[11px] uppercase tracking-[0.2em] shadow-elegant pointer-events-auto hover:bg-appointment/90 transition-colors font-bold"
             title={
               apptIsExternal
                 ? appt.appointmentUrl

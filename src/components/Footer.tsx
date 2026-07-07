@@ -56,19 +56,19 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-night text-primary-foreground">
+    <footer className="bg-night text-primary-foreground dark:text-foreground">
       <div className="container-luxe py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
         {/* Logo + tagline */}
         <div>
           <div className="flex items-center gap-3">
             <img
               src={logoRvAvocat}
-              alt="RV Avocat"
+              alt="Logo RV Avocat - Cabinet d'avocats à Paris et Abidjan"
               className="h-10 md:h-12 w-auto shrink-0"
             />
             <img
               src={logo}
-              alt="CABINET ROGER VANGAH"
+              alt="Logo complet du CABINET ROGER VANGAH - Droit des affaires"
               className="h-20 md:h-24 w-auto"
             />
           </div>

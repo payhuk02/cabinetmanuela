@@ -16,11 +16,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (typeof window === "undefined") return "fr";
     const stored = localStorage.getItem("lang") as Lang | null;
     if (stored === "fr" || stored === "en") return stored;
-    return navigator.language?.startsWith("en") ? "en" : "fr";
+    // SEO: Toujours forcer le français par défaut pour que Googlebot
+    // voie le site en français, même s'il navigue en en-US.
+    return "fr";
   });
 
   useEffect(() => {
-    document.documentElement.lang = lang;
+    // We do NOT update document.documentElement.lang here because
+    // we want to strictly keep lang="fr" for Googlebot SEO purposes,
+    // which is already handled in seo.ts.
     localStorage.setItem("lang", lang);
   }, [lang]);
 

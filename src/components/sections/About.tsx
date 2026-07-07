@@ -1,4 +1,5 @@
 import { Briefcase, Building2, Globe2, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { AppointmentButton } from "@/components/AppointmentButton";
 import { useLang } from "@/i18n/LanguageContext";
@@ -69,7 +70,7 @@ export const About = () => {
                   : `${portrait480} 480w, ${portrait800} 800w, ${portrait1280} 1280w`
               }
               sizes="(min-width: 1280px) 560px, (min-width: 1024px) 480px, (min-width: 640px) 420px, 92vw"
-              alt="Maître ROGER VANGAH"
+              alt="Portrait de Maître ROGER VANGAH, avocat expert en droit des affaires"
               loading="lazy"
               decoding="async"
               width={848}
@@ -81,27 +82,60 @@ export const About = () => {
 
         <div className="lg:col-span-6">
           <p className="eyebrow">{eyebrow}</p>
-          <h2 className="mt-6 font-serif font-bold text-4xl md:text-5xl leading-[1.1]" style={{ color: '#1E40AF' }}>
+          <h2 className="mt-6 font-serif font-bold text-4xl md:text-5xl leading-[1.1] text-appointment dark:text-accent">
             {titlePrefix} <span className="font-bold">{titleAccent}</span>
           </h2>
           <div className="gold-divider mt-8" />
 
-          <div className="mt-10 space-y-5 text-muted-foreground font-bold leading-relaxed text-justify">
-            <p className="text-foreground">{p1}</p>
-            <p>{p2}</p>
-            <p>{p3}</p>
-            <p>{p4}</p>
-            <p>{p5}</p>
+          <div className="mt-10 space-y-5 text-muted-foreground font-medium leading-relaxed text-justify">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-foreground first-letter:float-left first-letter:text-6xl first-letter:font-serif first-letter:text-accent first-letter:mr-3 first-letter:-mt-2 first-letter:font-bold">
+                {p1}
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <p>{p2}</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <p>{p3}</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <p>{p4}</p>
+              <p className="mt-5">{p5}</p>
+            </motion.div>
           </div>
 
           <div className="mt-6 pt-6 border-t border-border/60 text-center">
-            <p className="text-base md:text-lg font-bold leading-relaxed max-w-xl mx-auto" style={{ color: '#1E40AF' }}>
+            <p className="text-base md:text-lg font-bold leading-relaxed max-w-xl mx-auto text-appointment dark:text-accent">
               {subtitle}
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
               <AppointmentButton
                 label={ctaPrimary}
-                className="font-bold rounded-full bg-[#1E40AF] hover:bg-[#1E40AF]/90 text-white border-transparent"
+                className="font-bold rounded-full bg-appointment hover:bg-appointment/90 text-white border-transparent"
               />
               <Button asChild variant="outline" size="lg" className="font-semibold rounded-full">
                 <a href="/contact">

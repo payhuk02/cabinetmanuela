@@ -301,9 +301,9 @@ const Contact = () => {
   }[lang];
 
   const inputCls =
-    "mt-2 h-12 border border-border rounded-full px-5 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-[#1E40AF]/30 focus-visible:border-[#1E40AF]";
+    "mt-2 h-12 border border-border rounded-full px-5 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-appointment/30 focus-visible:border-appointment";
   const textareaCls =
-    "mt-2 border border-border rounded-2xl px-5 py-3 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-[#1E40AF]/30 focus-visible:border-[#1E40AF]";
+    "mt-2 border border-border rounded-2xl px-5 py-3 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-appointment/30 focus-visible:border-appointment";
 
   return (
     <div className="min-h-screen bg-background">

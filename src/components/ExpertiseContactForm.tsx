@@ -191,8 +191,8 @@ export const ExpertiseContactForm = ({ expertiseSlug, expertiseTitle }: Props) =
       </p>
     ) : null;
   const inputCls = (err: boolean) =>
-    `mt-2 h-12 rounded-full border px-5 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-[#1E40AF]/30 ${
-      err ? "border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30" : "border-border focus-visible:border-[#1E40AF]"
+    `mt-2 h-12 rounded-full border px-5 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-appointment/30 ${
+      err ? "border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30" : "border-border focus-visible:border-appointment"
     }`;
 
   return (
@@ -271,8 +271,8 @@ export const ExpertiseContactForm = ({ expertiseSlug, expertiseTitle }: Props) =
           placeholder={messagePlaceholder}
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "ef-message-err" : undefined}
-          className={`mt-2 border rounded-2xl px-5 py-3 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-[#1E40AF]/30 resize-none ${
-            errors.message ? "border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30" : "border-border focus-visible:border-[#1E40AF]"
+          className={`mt-2 border rounded-2xl px-5 py-3 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-appointment/30 resize-none ${
+            errors.message ? "border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30" : "border-border focus-visible:border-appointment"
           }`}
         />
         <FieldError id="ef-message-err" msg={errors.message} />

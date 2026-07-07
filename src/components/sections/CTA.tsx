@@ -40,7 +40,7 @@ export const CTA = () => {
             <div className="mt-10 flex justify-center">
               <AppointmentButton
                 label={button}
-                className="max-w-[calc(100vw-4rem)] sm:max-w-none whitespace-normal break-words text-center leading-tight h-auto min-h-12 py-3 px-4 sm:px-8 font-bold rounded-full bg-[#1E40AF] hover:bg-[#1E40AF]/90 text-white border-transparent tracking-tight sm:tracking-[0.22em] text-[10px] sm:text-xs"
+                className="max-w-[calc(100vw-4rem)] sm:max-w-none whitespace-normal break-words text-center leading-tight h-auto min-h-12 py-3 px-4 sm:px-8 font-bold rounded-full bg-appointment hover:bg-appointment/90 text-white border-transparent tracking-tight sm:tracking-[0.22em] text-[10px] sm:text-xs"
               />
             </div>
           </div>

@@ -276,7 +276,7 @@ export const Contact = () => {
   };
 
   const inputCls = (hasError: boolean) =>
-    `mt-2 h-12 rounded-full border bg-background/60 px-5 transition-colors focus-visible:ring-2 focus-visible:ring-[#1E40AF]/30 focus-visible:border-[#1E40AF] ${
+    `mt-2 h-12 rounded-full border bg-background/60 px-5 transition-colors focus-visible:ring-2 focus-visible:ring-appointment/30 focus-visible:border-appointment ${
       hasError
         ? "border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30"
         : "border-border"
@@ -455,10 +455,10 @@ export const Contact = () => {
               onBlur={handleBlur("message")}
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "cf-message-err" : undefined}
-              className={`mt-2 border rounded-2xl px-5 py-3 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-[#1E40AF]/30 resize-none ${
+              className={`mt-2 border rounded-2xl px-5 py-3 bg-background/60 transition-colors focus-visible:ring-2 focus-visible:ring-appointment/30 resize-none ${
                 errors.message
                   ? "border-destructive focus-visible:border-destructive focus-visible:ring-destructive/30"
-                  : "border-border focus-visible:border-[#1E40AF]"
+                  : "border-border focus-visible:border-appointment"
               }`}
             />
             <FieldError id="cf-message-err" msg={errors.message} />
