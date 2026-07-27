@@ -1,11 +1,7 @@
 import { useLang } from "@/i18n/LanguageContext";
 import { useSite } from "@/hooks/SiteDataContext";
 import { RichText } from "@/components/RichText";
-import t1 from "@/assets/team-1.webp";
-import t2 from "@/assets/team-2.webp";
-import t3 from "@/assets/team-3.webp";
-
-const fallbackPhotos = [t1, t2, t3];
+const fallbackPhotos: string[] = [];
 
 export const Team = () => {
   const { t, lang } = useLang();

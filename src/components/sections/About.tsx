@@ -4,9 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AppointmentButton } from "@/components/AppointmentButton";
 import { useLang } from "@/i18n/LanguageContext";
 import { useText } from "@/hooks/useText";
-import portrait480 from "@/assets/team/manuela-diabate-480.webp";
-import portrait800 from "@/assets/team/manuela-diabate-800.webp";
-import portrait1280 from "@/assets/team/manuela-diabate-1280.webp";
+
 
 const domains = [
   { icon: Briefcase, key: "about.domain1", fallback: "Droit des affaires" },
@@ -63,12 +61,7 @@ export const About = () => {
               className="absolute inset-x-8 -bottom-6 h-12 -z-10 rounded-full blur-2xl bg-primary/40"
             />
             <img
-              src={useCmsPortrait ? portraitSrc : portrait1280}
-              srcSet={
-                useCmsPortrait
-                  ? undefined
-                  : `${portrait480} 480w, ${portrait800} 800w, ${portrait1280} 1280w`
-              }
+              src={useCmsPortrait ? portraitSrc : ""}
               sizes="(min-width: 1280px) 560px, (min-width: 1024px) 480px, (min-width: 640px) 420px, 92vw"
               alt="Portrait de Maître Manuela DIABATE, avocat expert en droit des affaires"
               loading="lazy"

@@ -12,9 +12,7 @@ import {
   Calendar,
   Clock,
 } from "lucide-react";
-import portrait480 from "@/assets/team/manuela-diabate-480.webp";
-import portrait800 from "@/assets/team/manuela-diabate-800.webp";
-import portrait1280 from "@/assets/team/manuela-diabate-1280.webp";
+
 import { useLogo } from "@/hooks/useLogos";
 
 /* Vraies données extraites de cabinet-diabate.com (servent de fallback) */
@@ -63,7 +61,7 @@ function buildVCard(d: CardData) {
 }
 
 export default function Carte() {
-  const [data, setData] = useState<CardData>({ ...DEFAULTS, photo: portrait800 });
+  const [data, setData] = useState<CardData>({ ...DEFAULTS, photo: "" });
 
   useEffect(() => {
     let cancelled = false;
@@ -116,7 +114,7 @@ export default function Carte() {
         linkedin: get("card.linkedin", (ci as any).linkedin_url || (fm as any).linkedin_url || DEFAULTS.linkedin),
         instagram: get("card.instagram", DEFAULTS.instagram),
         appointment: get("card.appointment", (ci as any).appointment_url || DEFAULTS.appointment),
-        photo: (fm as any).photo_url || portrait800,
+        photo: (fm as any).photo_url || "",
       });
     })();
     return () => {
@@ -165,11 +163,6 @@ export default function Carte() {
             >
               <img
                 src={data.photo}
-                srcSet={
-                  data.photo === portrait800
-                    ? `${portrait480} 480w, ${portrait800} 800w, ${portrait1280} 1280w`
-                    : undefined
-                }
                 sizes="192px"
                 alt={data.name}
                 width={192}

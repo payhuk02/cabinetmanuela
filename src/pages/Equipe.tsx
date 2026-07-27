@@ -19,9 +19,7 @@ import {
 import { useSeo, buildLangAlternates } from "@/lib/seo";
 import { useBreadcrumbJsonLd } from "@/lib/useBreadcrumbJsonLd";
 import { useText } from "@/hooks/useText";
-import teamFallback1 from "@/assets/team-1.webp";
-import teamFallback2 from "@/assets/team-2.webp";
-import teamFallback3 from "@/assets/team-3.webp";
+
 /* eslint-disable import/no-unresolved */
 import heroTeamPic from "@/assets/hero-team.jpg?responsive";
 /* eslint-enable import/no-unresolved */
@@ -30,7 +28,7 @@ import { FounderCard } from "@/components/FounderCard";
 
 const heroTeamPicture = heroTeamPic as unknown as ResponsivePicture;
 
-const fallbacks = [teamFallback1, teamFallback2, teamFallback3];
+const fallbacks: string[] = [];
 
 const EquipeInner = () => {
   const { team, loading, contact } = useSite();
