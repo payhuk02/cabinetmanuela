@@ -1,117 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.vangah-avocats.com/</loc>
+    <loc>https://www.diabate-avocat.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/cabinet</loc>
+    <loc>https://www.diabate-avocat.com/cabinet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/equipe</loc>
+    <loc>https://www.diabate-avocat.com/equipe</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises</loc>
+    <loc>https://www.diabate-avocat.com/expertises</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/actualites</loc>
+    <loc>https://www.diabate-avocat.com/actualites</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/contact</loc>
+    <loc>https://www.diabate-avocat.com/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/cabinet/carte</loc>
+    <loc>https://www.diabate-avocat.com/cabinet/carte</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-des-affaires</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-des-affaires</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-ohada</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-bancaire-et-financier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-immobilier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-penal-et-droit-penal-des-affaires</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-des-etrangers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-petrolier-et-minier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vangah-avocats.com/expertises/surendettement-et-procedure-collective</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-des-affaires/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-des-affaires/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-ohada/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-bancaire-et-financier</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diabate-avocat.com/expertises/droit-bancaire-et-financier/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-bancaire-et-financier/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/surendettement-et-procedure-collective</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diabate-avocat.com/expertises/surendettement-et-procedure-collective/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-immobilier/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-ohada</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diabate-avocat.com/expertises/droit-ohada/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-penal-et-droit-penal-des-affaires/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-immobilier</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diabate-avocat.com/expertises/droit-immobilier/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-des-etrangers/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-penal-et-droit-penal-des-affaires</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diabate-avocat.com/expertises/droit-penal-et-droit-penal-des-affaires/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/droit-petrolier-et-minier/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-des-etrangers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diabate-avocat.com/expertises/droit-des-etrangers/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.vangah-avocats.com/expertises/surendettement-et-procedure-collective/faq</loc>
+    <loc>https://www.diabate-avocat.com/expertises/droit-petrolier-et-minier</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.diabate-avocat.com/expertises/droit-petrolier-et-minier/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

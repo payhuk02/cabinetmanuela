@@ -8,9 +8,8 @@ async function generateSitemap() {
   const supabaseUrl = env.VITE_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   const supabaseAnonKey = env.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
 
-  const siteUrl = "https://www.vangah-avocats.com";
+  const siteUrl = "https://www.diabate-avocat.com";
 
-  // Static routes
   const staticRoutes = [
     { loc: "/", changefreq: "weekly", priority: 1.0 },
     { loc: "/cabinet", changefreq: "monthly", priority: 0.8 },
@@ -19,24 +18,6 @@ async function generateSitemap() {
     { loc: "/actualites", changefreq: "weekly", priority: 0.8 },
     { loc: "/contact", changefreq: "yearly", priority: 0.7 },
     { loc: "/cabinet/carte", changefreq: "yearly", priority: 0.5 },
-    
-    { loc: "/expertises/droit-des-affaires", changefreq: "monthly", priority: 0.8 },
-    { loc: "/expertises/droit-ohada", changefreq: "monthly", priority: 0.8 },
-    { loc: "/expertises/droit-bancaire-et-financier", changefreq: "monthly", priority: 0.8 },
-    { loc: "/expertises/droit-immobilier", changefreq: "monthly", priority: 0.8 },
-    { loc: "/expertises/droit-penal-et-droit-penal-des-affaires", changefreq: "monthly", priority: 0.8 },
-    { loc: "/expertises/droit-des-etrangers", changefreq: "monthly", priority: 0.8 },
-    { loc: "/expertises/droit-petrolier-et-minier", changefreq: "monthly", priority: 0.8 },
-    { loc: "/expertises/surendettement-et-procedure-collective", changefreq: "monthly", priority: 0.8 },
-
-    { loc: "/expertises/droit-des-affaires/faq", changefreq: "monthly", priority: 0.6 },
-    { loc: "/expertises/droit-ohada/faq", changefreq: "monthly", priority: 0.6 },
-    { loc: "/expertises/droit-bancaire-et-financier/faq", changefreq: "monthly", priority: 0.6 },
-    { loc: "/expertises/droit-immobilier/faq", changefreq: "monthly", priority: 0.6 },
-    { loc: "/expertises/droit-penal-et-droit-penal-des-affaires/faq", changefreq: "monthly", priority: 0.6 },
-    { loc: "/expertises/droit-des-etrangers/faq", changefreq: "monthly", priority: 0.6 },
-    { loc: "/expertises/droit-petrolier-et-minier/faq", changefreq: "monthly", priority: 0.6 },
-    { loc: "/expertises/surendettement-et-procedure-collective/faq", changefreq: "monthly", priority: 0.6 },
   ];
 
   let dynamicRoutes = [];
@@ -64,6 +45,31 @@ async function generateSitemap() {
           loc: `/actualites/${route}`,
           changefreq: "monthly",
           priority: 0.7,
+        });
+      });
+    }
+
+    console.log("Fetching expertises from Supabase for sitemap...");
+    const { data: expertises, error: expertisesError } = await supabase
+      .from("expertises")
+      .select("slug")
+      .eq("published", true);
+
+    if (expertisesError) {
+      console.error("Error fetching expertises from Supabase:", expertisesError);
+    } else if (expertises) {
+      console.log(`Found ${expertises.length} expertises to include in sitemap.`);
+      expertises.forEach((exp) => {
+        const route = exp.slug;
+        dynamicRoutes.push({
+          loc: `/expertises/${route}`,
+          changefreq: "monthly",
+          priority: 0.8,
+        });
+        dynamicRoutes.push({
+          loc: `/expertises/${route}/faq`,
+          changefreq: "monthly",
+          priority: 0.6,
         });
       });
     }

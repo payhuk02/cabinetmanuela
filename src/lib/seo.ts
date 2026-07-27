@@ -188,7 +188,7 @@ export const buildLangAlternates = (
   path: string,
   _currentLang: "fr" | "en"
 ): { canonical: string; alternates: AlternateLink[] } => {
-  const siteUrl = import.meta.env.VITE_SITE_URL || "https://www.cabinet-diabate.com";
+  const siteUrl = import.meta.env.VITE_SITE_URL || "https://www.diabate-avocat.com";
   const origin =
     typeof window !== "undefined" ? window.location.origin : siteUrl;
   const cleanPath = path.startsWith("/") ? path : `/${path}`;

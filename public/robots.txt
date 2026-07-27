@@ -6,4 +6,4 @@ Disallow: /reset-password
 Disallow: /*?lang=en
 Disallow: /*&lang=en
 
-Sitemap: https://www.cabinet-diabate.com/sitemap.xml
+Sitemap: https://www.diabate-avocat.com/sitemap.xml
