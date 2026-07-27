@@ -15,7 +15,7 @@ import {
 import portrait480 from "@/assets/team/manuela-diabate-480.webp";
 import portrait800 from "@/assets/team/manuela-diabate-800.webp";
 import portrait1280 from "@/assets/team/manuela-diabate-1280.webp";
-import logoGold from "@/assets/logo-manuela-diabate-light-transparent.webp";
+import { useLogo } from "@/hooks/useLogos";
 
 /* Vraies données extraites de cabinet-diabate.com (servent de fallback) */
 const DEFAULTS = {
@@ -129,6 +129,8 @@ export default function Carte() {
     return URL.createObjectURL(blob);
   }, [data]);
 
+  const logoDark = useLogo("logo.header", null);
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-[hsl(var(--night))] text-primary-foreground">
       <div
@@ -147,7 +149,7 @@ export default function Carte() {
 
       <div className="relative mx-auto flex min-h-screen w-full max-w-md flex-col px-6 py-8">
         <header className="flex items-center justify-center pt-3">
-          <img src={logoGold} alt={data.cabinet} className="h-16 md:h-20 w-auto opacity-95 drop-shadow-[0_4px_16px_rgba(201,168,76,0.25)]" />
+          {logoDark && <img src={logoDark} alt={data.cabinet} className="h-16 md:h-20 w-auto opacity-95 drop-shadow-[0_4px_16px_rgba(201,168,76,0.25)]" />}
         </header>
 
         <section className="mt-9 flex flex-col items-center text-center">
