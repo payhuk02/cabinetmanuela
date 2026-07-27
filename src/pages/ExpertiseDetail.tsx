@@ -25,9 +25,7 @@ const ExpertiseDetail = () => {
   const { data: expertise, loading } = useExpertise(slug);
   const { data: allExpertises } = useExpertises();
 
-  const heroImage = expertise
-    ? expertise.image_url || EXPERTISE_IMAGES[expertise.slug]
-    : null;
+  const heroImage = expertise ? expertise.image_url : null;
 
   const { canonical, alternates } = buildLangAlternates(
     `/expertises/${slug ?? ""}`,

@@ -73,12 +73,11 @@ export const Hero = () => {
   const customHeroImage = useText("hero.image", "");
   const sectionRef = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [overlayOpacity, setOverlayOpacity] = useState(1);
-  const [videoEnded, setVideoEnded] = useState(false);
+  const [overlayOpacity, setOverlayOpacity] = useState(0);
+  const [videoEnded, setVideoEnded] = useState(true);
   const [activeSlide, setActiveSlide] = useState(0);
-  // The ink video starts immediately on page load — no deferred mount.
-  // Users with reduced motion preference skip it entirely.
-  const [skipVideo, setSkipVideo] = useState(false);
+  // The ink video is now permanently skipped
+  const [skipVideo, setSkipVideo] = useState(true);
   // Stratégie de préchargement progressive :
   // - "metadata" au mount → ne télécharge que les métadonnées (quelques Ko),
   //   ce qui libère la bande passante pour le LCP (texte + image carrousel).

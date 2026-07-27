@@ -202,8 +202,8 @@ export const ExpertisesAdmin = () => {
                   <Save className="h-4 w-4" />
                   Sauvegarder
                 </Button>
-                <Button variant="ghost" size="sm" onClick={() => del(e.id)} className="text-destructive">
-                  <Trash2 className="h-4 w-4" />
+                <Button variant="ghost" size="sm" onClick={() => del(e.id)} className="text-destructive" title="Supprimer l'expertise">
+                  <Trash2 className="h-4 w-4 mr-1.5" /> Supprimer
                 </Button>
               </div>
 
@@ -247,7 +247,19 @@ export const ExpertisesAdmin = () => {
                       <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Image</label>
                       <div className="mt-1 flex items-center gap-3">
                         {e.image_url && (
-                          <img src={e.image_url} alt="" className="h-10 w-16 object-cover" />
+                          <div className="relative group">
+                            <img src={e.image_url} alt="" className="h-10 w-16 object-cover border border-border" />
+                            <Button
+                              type="button"
+                              variant="destructive"
+                              size="icon"
+                              className="absolute -top-2 -right-2 h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity rounded-full"
+                              onClick={() => saveLocal(e.id, { image_url: null })}
+                              title="Supprimer l'image"
+                            >
+                              <Trash2 className="h-3 w-3" />
+                            </Button>
+                          </div>
                         )}
                         <label className="inline-flex items-center gap-2 cursor-pointer text-xs border border-border px-3 py-2 hover:bg-secondary">
                           <Upload className="h-3.5 w-3.5" /> Téléverser
