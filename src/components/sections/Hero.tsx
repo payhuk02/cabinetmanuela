@@ -1,11 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useText } from "@/hooks/useText";
 import { ResponsiveImage, type ResponsivePicture } from "@/components/ResponsiveImage";
-import heroInkDesktop from "@/assets/hero-ink-1280.mp4";
-import heroInkMobile from "@/assets/hero-ink-854.mp4";
-import heroInkPoster from "@/assets/hero-ink-poster.jpg";
-import rvEmblem from "@/assets/md-avocat-emblem-transparent.png";
-import scaleOfJustice from "@/assets/scale-of-justice.svg";
 /* eslint-disable import/no-unresolved */
 import imgAffaires from "@/assets/expertise-affaires.jpg?responsive";
 import imgBancaire from "@/assets/expertise-bancaire.jpg?responsive";
@@ -351,80 +346,9 @@ export const Hero = () => {
           );
         })}
 
-        {/* Vidéo d'encre — retournée verticalement (scaleY(-1)) : l'encre
-            qui se déploie depuis le bas dans la source apparaît désormais
-            depuis le haut. À la fin, elle s'évacue vers le bas. */}
-        {!skipVideo && (
-          <video
-            ref={videoRef}
-            className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden will-change-transform"
-            style={{
-              opacity: videoEnded ? 0 : 1,
-              transform: videoEnded
-                ? "scaleY(-1) translateY(-100%)"
-                : "scaleY(-1) translateY(0)",
-              transition:
-                "transform 1400ms cubic-bezier(0.65, 0, 0.35, 1), opacity 1200ms ease-out",
-            }}
-            autoPlay
-            muted
-            playsInline
-            preload={videoPreload}
-            poster={heroInkPoster}
-            onEnded={handleEnded}
-            aria-hidden="true"
-          >
-            <source src={heroInkMobile} type="video/mp4" media="(max-width: 767px)" />
-            <source src={heroInkDesktop} type="video/mp4" />
-          </video>
-        )}
 
         {/* Voile sombre supprimé : aucune ombre/overlay sur le hero. */}
 
-        {/* Filigrane central : balance de la justice + emblème RV.
-            Masqué tant que l'animation d'encre n'est pas terminée pour
-            laisser la vidéo passer en premier sans interférence. */}
-        <div
-          className="pointer-events-none absolute inset-0 flex items-center justify-center z-[1] transition-opacity duration-1000 ease-out"
-          style={{ opacity: videoEnded ? 1 : 0 }}
-          aria-hidden="true"
-        >
-          <div className="relative flex items-center justify-center">
-            {/* Halo doré subtil */}
-            <div
-              className="absolute w-[70vmin] max-w-[680px] aspect-square rounded-full opacity-25 blur-3xl"
-              style={{
-                background:
-                  "radial-gradient(circle, hsl(var(--accent) / 0.35) 0%, hsl(var(--accent) / 0.08) 45%, transparent 70%)",
-              }}
-            />
-            {/* Balance de la justice premium */}
-            <div
-              className="absolute w-[82vmin] max-w-[820px] aspect-square text-accent opacity-[0.09] animate-[float_8s_ease-in-out_infinite]"
-              style={{
-                WebkitMaskImage: `url(${scaleOfJustice})`,
-                maskImage: `url(${scaleOfJustice})`,
-                WebkitMaskRepeat: "no-repeat",
-                maskRepeat: "no-repeat",
-                WebkitMaskPosition: "center",
-                maskPosition: "center",
-                WebkitMaskSize: "contain",
-                maskSize: "contain",
-                background:
-                  "linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(45 85% 65%) 35%, hsl(var(--accent)) 60%, hsl(38 70% 45%) 100%)",
-              }}
-            />
-            {/* Emblème RV transparent au centre */}
-            <img
-              src={rvEmblem}
-              alt="Logo du Cabinet Manuela DIABATE"
-              loading="eager"
-              width={1024}
-              height={1024}
-              className="relative w-[22vmin] max-w-[200px] h-auto opacity-90"
-            />
-          </div>
-        </div>
       </div>
 
       <div className="container-luxe relative z-10 pt-28 pb-20">
