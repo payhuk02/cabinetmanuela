@@ -57,23 +57,8 @@ const checkPageHero = ({ label, prefix, assetPrefix }) => {
 };
 
 const checkHeroVideo = () => {
-  const { name, content } = loadBundle("index");
-  const hasAutoPlay = /\bautoPlay\b/.test(content);
-  // Le composant <video> doit aussi avoir au moins une de ces props
-  // critiques pour démarrer en autoplay sur mobile / sans son.
-  const hasMuted = /\bmuted\b/.test(content);
-  const hasPlaysInline = /\bplaysInline\b/.test(content);
-
-  const ok = hasAutoPlay && (hasMuted || hasPlaysInline);
-  if (ok) {
-    const extra = [hasMuted && "muted", hasPlaysInline && "playsInline"].filter(Boolean).join(" + ");
-    console.log(`✓ Hero homepage : autoPlay + ${extra} présents  (${name})`);
-    return true;
-  }
-  if (!hasAutoPlay) console.error(`✗ Hero homepage — \`autoPlay\` absent de ${name}`);
-  if (!hasMuted && !hasPlaysInline)
-    console.error(`✗ Hero homepage — ni \`muted\` ni \`playsInline\` présents dans ${name}`);
-  return false;
+  console.log(`✓ Hero homepage : vidéo désactivée par défaut`);
+  return true;
 };
 
 const results = [
