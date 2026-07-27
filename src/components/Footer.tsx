@@ -3,8 +3,7 @@ import { useSite } from "@/hooks/SiteDataContext";
 import { useText } from "@/hooks/useText";
 import { LangSwitcher } from "./LangSwitcher";
 import { Link } from "react-router-dom";
-import logoDefault from "@/assets/logo-manuela-diabate-night.webp";
-import logoRvAvocat from "@/assets/logo-md-avocat-night.webp";
+
 import { useLogo } from "@/hooks/useLogos";
 import { useExpertises } from "@/hooks/useExpertises";
 import {  MapPin, Phone, Mail, Linkedin, Instagram , MessageCircle, Building2 } from "lucide-react";
@@ -21,7 +20,7 @@ const INSTAGRAM = "https://instagram.com/manuela.diabate";
 export const Footer = () => {
   const { t, lang } = useLang();
   const { contact } = useSite();
-  const logo = useLogo("logo.footer", logoDefault);
+  const logo = useLogo("logo.footer", null);
   const { data: expertises } = useExpertises({ onlyPublished: true });
 
   const tagline = useText("footer.tagline", t.footer.tagline);
@@ -62,15 +61,10 @@ export const Footer = () => {
         {/* Logo + tagline */}
         <div>
           <div className="flex items-center gap-3">
-            <img
-              src={logoRvAvocat}
-              alt="Logo RV Avocat - Cabinet d'avocats à Paris et Abidjan"
-              className="h-10 md:h-12 w-auto shrink-0"
-            />
             {logo && (
               <img
                 src={logo}
-                alt="Logo complet du CABINET Manuela DIABATE - Droit des affaires"
+                alt="Logo cabinet"
                 className="h-20 md:h-24 w-auto"
               />
             )}

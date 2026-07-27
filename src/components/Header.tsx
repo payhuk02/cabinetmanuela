@@ -5,16 +5,14 @@ import { useText } from "@/hooks/useText";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
 import { MagneticButton } from "./MagneticButton";
-import logoDarkDefault from "@/assets/logo-manuela-diabate-white.webp";
-import logoLightDefault from "@/assets/logo-manuela-diabate-light-transparent.webp";
-import logoRvAvocat from "@/assets/logo-md-avocat-white.webp";
+
 import { useLogo } from "@/hooks/useLogos";
 import { AppointmentButton } from "@/components/AppointmentButton";
 
 export const Header = () => {
   const { t, lang } = useLang();
-  const logoDark = useLogo("logo.header", logoDarkDefault);
-  const logoLight = useLogo("logo.footer", logoLightDefault);
+  const logoDark = useLogo("logo.header", null);
+  const logoLight = useLogo("logo.footer", null);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -52,11 +50,7 @@ export const Header = () => {
     >
       <div className="container-luxe flex h-16 md:h-18 items-center gap-3 xl:gap-6">
         <a href="/" className="flex items-center gap-2 md:gap-3 group min-w-0 shrink-0" aria-label="Manuela DIABATE — Retour à l'accueil">
-          <img
-            src={logoRvAvocat}
-            alt="RV Avocat"
-            className="h-6 md:h-7 w-auto shrink-0 transition-transform group-hover:scale-105"
-          />
+
           {logoDark && (
             <img
               src={logoDark}
