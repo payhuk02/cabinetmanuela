@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
 import { About } from "@/components/sections/About";
-
+import { Timeline } from "@/components/sections/Timeline";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { getValueIcon } from "@/data/valueIcons";
@@ -229,6 +229,9 @@ const Cabinet = () => {
             </div>
           </div>
         </section>
+
+        {/* Frise Chronologique */}
+        <Timeline />
 
         {/* Valeurs */}
         <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-primary via-primary to-[hsl(var(--primary))]">

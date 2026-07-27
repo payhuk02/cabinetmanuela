@@ -9,6 +9,8 @@ import { News } from "@/components/sections/News";
 import { NewsTicker } from "@/components/sections/NewsTicker";
 import { CTA } from "@/components/sections/CTA";
 import { Contact } from "@/components/sections/Contact";
+import { Metrics } from "@/components/sections/Metrics";
+import { FounderCard } from "@/components/sections/FounderCard";
 
 import { useSeo, buildLangAlternates } from "@/lib/seo";
 import { useLang } from "@/i18n/LanguageContext";
@@ -109,19 +111,8 @@ const Index = () => {
         <Hero />
         <About />
         <Strengths />
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground text-center px-4">
-          <div className="container-luxe max-w-4xl mx-auto">
-            <blockquote className="font-serif text-2xl md:text-4xl italic leading-relaxed text-primary-foreground/90">
-              "La justice n'est pas une simple procédure, c'est un droit fondamental. 
-              Notre mission est de vous accompagner avec humanité et détermination pour le faire valoir."
-            </blockquote>
-            <div className="mt-8 flex items-center justify-center gap-4 text-accent">
-              <div className="h-px w-12 bg-accent/50" />
-              <p className="font-bold tracking-widest uppercase text-sm">Maître Manuela DIABATE</p>
-              <div className="h-px w-12 bg-accent/50" />
-            </div>
-          </div>
-        </section>
+        <Metrics />
+        <FounderCard />
         <Contact />
       </main>
       <Footer />

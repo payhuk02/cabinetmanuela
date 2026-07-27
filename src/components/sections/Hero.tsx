@@ -317,7 +317,7 @@ export const Hero = () => {
         {slides.map((s, i) => {
           const visible = videoEnded && i === activeSlide;
           const wrapperClass =
-            "absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out";
+            `absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out ${visible ? "animate-ken-burns origin-center" : ""}`;
           const wrapperStyle = { opacity: visible ? 1 : 0 } as const;
           if (s.picture) {
             return (

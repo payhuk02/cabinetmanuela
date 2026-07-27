@@ -46,8 +46,8 @@ export const Header = () => {
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${
         scrolled 
-          ? "bg-background/70 backdrop-blur-md shadow-sm border-b border-border/40 py-1" 
-          : "bg-transparent py-3"
+          ? "bg-background/85 backdrop-blur-lg shadow-sm border-b border-border/50 py-2" 
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container-luxe flex h-16 md:h-18 items-center gap-3 xl:gap-6">

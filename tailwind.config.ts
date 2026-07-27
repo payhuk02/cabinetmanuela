@@ -135,6 +135,10 @@ export default {
           "0%":   { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "ken-burns": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.05)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -150,6 +154,7 @@ export default {
         "welcome-line": "welcome-line 4.5s cubic-bezier(0.22,1,0.36,1) forwards",
         "btn-sweep": "btn-sweep 3.5s cubic-bezier(0.4,0,0.2,1) infinite",
         "marquee": "marquee 50s linear infinite",
+        "ken-burns": "ken-burns 15s ease-out forwards",
       },
     },
   },
