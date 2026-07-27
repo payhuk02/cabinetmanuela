@@ -67,11 +67,13 @@ export const Footer = () => {
               alt="Logo RV Avocat - Cabinet d'avocats à Paris et Abidjan"
               className="h-10 md:h-12 w-auto shrink-0"
             />
-            <img
-              src={logo}
-              alt="Logo complet du CABINET Manuela DIABATE - Droit des affaires"
-              className="h-20 md:h-24 w-auto"
-            />
+            {logo && (
+              <img
+                src={logo}
+                alt="Logo complet du CABINET Manuela DIABATE - Droit des affaires"
+                className="h-20 md:h-24 w-auto"
+              />
+            )}
           </div>
           <p className="mt-6 text-sm text-primary-foreground/60 max-w-xs leading-relaxed">
             {tagline}

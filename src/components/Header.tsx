@@ -57,16 +57,20 @@ export const Header = () => {
             alt="RV Avocat"
             className="h-6 md:h-7 w-auto shrink-0 transition-transform group-hover:scale-105"
           />
-          <img
-            src={logoDark}
-            alt="CABINET Manuela DIABATE"
-            className="h-5 md:h-7 xl:h-8 w-auto shrink-0 hidden dark:block"
-          />
-          <img
-            src={logoLight}
-            alt="CABINET Manuela DIABATE"
-            className="h-5 md:h-7 xl:h-8 w-auto shrink-0 dark:hidden"
-          />
+          {logoDark && (
+            <img
+              src={logoDark}
+              alt="CABINET Manuela DIABATE"
+              className="h-5 md:h-7 xl:h-8 w-auto shrink-0 hidden dark:block"
+            />
+          )}
+          {logoLight && (
+            <img
+              src={logoLight}
+              alt="CABINET Manuela DIABATE"
+              className="h-5 md:h-7 xl:h-8 w-auto shrink-0 dark:hidden"
+            />
+          )}
         </a>
 
         <nav className="hidden lg:flex items-center gap-4 xl:gap-7 ml-auto">
@@ -107,8 +111,8 @@ export const Header = () => {
       {open && (
         <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-xl text-foreground animate-fade-in lg:hidden overflow-y-auto">
           <div className="container-luxe flex h-20 items-center justify-between">
-            <img src={logoLight} alt="Manuela DIABATE" className="h-10 md:h-12 w-auto dark:hidden" />
-            <img src={logoDark} alt="Manuela DIABATE" className="h-10 md:h-12 w-auto hidden dark:block" />
+            {logoLight && <img src={logoLight} alt="Manuela DIABATE" className="h-10 md:h-12 w-auto dark:hidden" />}
+            {logoDark && <img src={logoDark} alt="Manuela DIABATE" className="h-10 md:h-12 w-auto hidden dark:block" />}
             <button onClick={() => setOpen(false)} aria-label="Close" className="p-2 -mr-2 text-foreground">
               <X size={24} />
             </button>
