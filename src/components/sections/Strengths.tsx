@@ -20,37 +20,37 @@ export const Strengths = () => {
     {
       title: useText(
         "strengths.1.title",
-        lang === "fr" ? "Expertise franco-africaine" : "Franco-African expertise"
+        lang === "fr" ? "Expertise ciblée" : "Targeted expertise"
       ),
       desc: useText(
         "strengths.1.desc",
         lang === "fr"
-          ? "Une double culture juridique au service de dossiers transnationaux."
-          : "A dual legal culture serving cross-border matters."
+          ? "Une maîtrise pointue en droit des étrangers et droit de la famille."
+          : "In-depth knowledge of immigration and family law."
       ),
     },
     {
       title: useText(
         "strengths.2.title",
-        lang === "fr" ? "Approche stratégique" : "Strategic approach"
+        lang === "fr" ? "Approche humaine" : "Human approach"
       ),
       desc: useText(
         "strengths.2.desc",
         lang === "fr"
-          ? "Une analyse fine pour orienter chaque décision avec efficacité."
-          : "Sharp analysis to drive every decision effectively."
+          ? "Une écoute attentive et bienveillante pour chaque situation personnelle."
+          : "Attentive and compassionate listening for every personal situation."
       ),
     },
     {
       title: useText(
         "strengths.3.title",
-        lang === "fr" ? "Accompagnement sur mesure" : "Tailored support"
+        lang === "fr" ? "Stratégie sur mesure" : "Tailored strategy"
       ),
       desc: useText(
         "strengths.3.desc",
         lang === "fr"
-          ? "Des solutions adaptées aux réalités de chaque client."
-          : "Solutions tailored to each client's reality."
+          ? "Des solutions juridiques adaptées aux réalités de chaque client."
+          : "Legal solutions tailored to each client's reality."
       ),
     },
     {
@@ -61,8 +61,8 @@ export const Strengths = () => {
       desc: useText(
         "strengths.4.desc",
         lang === "fr"
-          ? "Une exigence absolue dans la défense de vos intérêts."
-          : "Absolute rigour in defending your interests."
+          ? "Une exigence absolue dans la défense de vos droits."
+          : "Absolute rigour in defending your rights."
       ),
     },
   ];
@@ -112,7 +112,7 @@ export const Strengths = () => {
                 key={itemTitle}
                 className="group relative p-[1px] bg-gradient-to-b from-accent/40 via-accent/10 to-transparent transition-all duration-500 hover:from-accent hover:via-accent/40 hover:-translate-y-1"
               >
-                <div className="relative h-full bg-gradient-to-b from-[hsl(var(--primary)/0.85)] to-[hsl(var(--primary)/0.6)] backdrop-blur-sm p-8 flex flex-col items-center text-center transition-colors duration-500 group-hover:from-[hsl(var(--primary)/0.95)]">
+                <div className="relative h-full bg-white backdrop-blur-sm p-8 flex flex-col items-center text-center transition-colors duration-500 group-hover:bg-white/95">
                   {/* Subtle glow */}
                   <div
                     aria-hidden
@@ -123,7 +123,7 @@ export const Strengths = () => {
                     }}
                   />
 
-                  <h3 className="relative font-serif font-bold text-xl text-primary-foreground tracking-tight">
+                  <h3 className="relative font-serif font-bold text-xl text-black tracking-tight">
                     {itemTitle}
                   </h3>
 
@@ -134,7 +134,7 @@ export const Strengths = () => {
                     />
                   </div>
 
-                  <p className="relative mt-5 text-sm text-primary-foreground/75 leading-relaxed">
+                  <p className="relative mt-5 text-sm text-black/75 leading-relaxed">
                     {desc}
                   </p>
                 </div>

@@ -6,7 +6,7 @@ const GROUPS: GroupDef[] = [
   {
     label: "Footer",
     keys: [
-      { key: "footer.tagline", label: "Tagline", defaultValue: "Cabinet ROGER VANGAH" },
+      { key: "footer.tagline", label: "Tagline", defaultValue: "Cabinet Manuela DIABATE" },
       { key: "footer.legal", label: "Mentions légales", defaultValue: "Mentions légales" },
       { key: "footer.privacy", label: "Confidentialité", defaultValue: "Confidentialité" },
       { key: "footer.rights", label: "Mention de droits", defaultValue: "Tous droits réservés." },

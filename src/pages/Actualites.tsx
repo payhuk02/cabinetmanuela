@@ -113,14 +113,14 @@ const Actualites = () => {
   const seoTitle = useText(
     "seo.news.title",
     lang === "fr"
-      ? "Actualités Juridiques & Analyses — Avocats ROGER VANGAH"
-      : "Legal news & analyses — ROGER VANGAH Law Firm"
+      ? "Actualités Juridiques & Analyses — Avocats Manuela DIABATE"
+      : "Legal news & analyses — Manuela DIABATE Law Firm"
   );
   const seoDescription = useText(
     "seo.news.description",
     lang === "fr"
-      ? "Actualités juridiques et analyses du Cabinet ROGER VANGAH : droit des affaires, OHADA, contentieux, fiscalité et droit international à Paris."
-      : "Articles, insights and news from the ROGER VANGAH firm: business law, OHADA, litigation, tax and international law."
+      ? "Actualités juridiques et analyses du Cabinet Manuela DIABATE : droit des affaires, OHADA, contentieux, fiscalité et droit international à Paris."
+      : "Articles, insights and news from the Manuela DIABATE firm: business law, OHADA, litigation, tax and international law."
   );
   const seoImage = useText("seo.news.image", "");
 

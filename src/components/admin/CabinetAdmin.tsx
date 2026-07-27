@@ -7,7 +7,7 @@ const GROUPS: GroupDef[] = [
     keys: [
       { key: "cabinet.eyebrow", label: "Eyebrow hero", defaultValue: "Cabinet" },
       { key: "cabinet.heroTitlePrefix", label: "Titre hero — préfixe (ex. Cabinet)", defaultValue: "Cabinet" },
-      { key: "cabinet.heroTitleAccent", label: "Titre hero — mot doré (ex. ROGER VANGAH)", defaultValue: "ROGER VANGAH" },
+      { key: "cabinet.heroTitleAccent", label: "Titre hero — mot doré (ex. Manuela DIABATE)", defaultValue: "Manuela DIABATE" },
       { key: "cabinet.heroSubtitle", label: "Sous-titre hero", multiline: true, defaultValue: "Un partenaire juridique entre la France et l'Afrique." },
     ],
   },
@@ -18,11 +18,11 @@ const GROUPS: GroupDef[] = [
       { key: "cabinet.presentation.titlePrefix", label: "Titre — préfixe", defaultValue: "Un cabinet" },
       { key: "cabinet.presentation.titleAccent", label: "Titre — mot doré (italique)", defaultValue: "à votre image" },
       { key: "cabinet.presentation.lead", label: "Phrase d'accroche", multiline: true, defaultValue: "Conseil stratégique & contentieux, en France et à l'international." },
-      { key: "cabinet.presentation.p1", label: "Paragraphe 1", multiline: true, defaultValue: "Cabinet ROGER VANGAH est fondé par Maître ROGER VANGAH, avocat inscrit au Barreau de Paris." },
+      { key: "cabinet.presentation.p1", label: "Paragraphe 1", multiline: true, defaultValue: "Cabinet Manuela DIABATE est fondé par Maître Manuela DIABATE, avocat inscrit au Barreau de Paris." },
       { key: "cabinet.presentation.p2", label: "Paragraphe 2", multiline: true, defaultValue: "Le cabinet accompagne une clientèle composée d'entreprises, d'investisseurs, d'institutions et de particuliers dans la gestion de leurs enjeux juridiques et stratégiques, en France comme à l'international." },
-      { key: "cabinet.presentation.p3", label: "Paragraphe 3", multiline: true, defaultValue: "Cabinet ROGER VANGAH développe une pratique orientée vers le conseil stratégique et le contentieux, en mettant au service de ses clients une expertise juridique solide et une compréhension fine des enjeux économiques." },
+      { key: "cabinet.presentation.p3", label: "Paragraphe 3", multiline: true, defaultValue: "Cabinet Manuela DIABATE développe une pratique orientée vers le conseil stratégique et le contentieux, en mettant au service de ses clients une expertise juridique solide et une compréhension fine des enjeux économiques." },
       { key: "cabinet.presentation.p4", label: "Paragraphe 4", multiline: true, defaultValue: "Alliant exigence professionnelle, sens de la stratégie et engagement au service des intérêts de ses clients, le cabinet s'inscrit dans une démarche d'excellence et d'efficacité, au service d'une pratique juridique de haut niveau." },
-      { key: "cabinet.presentation.quote", label: "Citation finale (italique doré)", multiline: true, defaultValue: "Par son positionnement et sa vision, le Cabinet ROGER VANGAH se veut un partenaire juridique de confiance, capable d'offrir à ses clients un accompagnement sur mesure dans des contextes juridiques et économiques exigeants." },
+      { key: "cabinet.presentation.quote", label: "Citation finale (italique doré)", multiline: true, defaultValue: "Par son positionnement et sa vision, le Cabinet Manuela DIABATE se veut un partenaire juridique de confiance, capable d'offrir à ses clients un accompagnement sur mesure dans des contextes juridiques et économiques exigeants." },
     ],
   },
   {

@@ -42,14 +42,14 @@ const EquipeInner = () => {
   const seoTitle = useText(
     "seo.team.title",
     lang === "fr"
-      ? "Équipe d'avocats à Paris — Cabinet ROGER VANGAH"
-      : "Our lawyers — ROGER VANGAH Law Firm, Paris"
+      ? "Équipe d'avocats à Paris — Cabinet Manuela DIABATE"
+      : "Our lawyers — Manuela DIABATE Law Firm, Paris"
   );
   const seoDescription = useText(
     "seo.team.description",
     lang === "fr"
-      ? "Maître ROGER VANGAH et ses avocats partenaires : une équipe d'avocats à Paris experte en droit des affaires, OHADA et contentieux international."
-      : "ROGER VANGAH and partner attorneys advise clients in Paris and Africa with rigor, confidentiality and legal excellence."
+      ? "Maître Manuela DIABATE et ses avocats partenaires : une équipe d'avocats à Paris experte en droit des affaires, OHADA et contentieux international."
+      : "Manuela DIABATE and partner attorneys advise clients in Paris and Africa with rigor, confidentiality and legal excellence."
   );
   const seoImage = useText("seo.team.image", "");
 

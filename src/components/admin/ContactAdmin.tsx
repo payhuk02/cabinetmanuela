@@ -80,8 +80,8 @@ export const ContactAdmin = () => {
     address: "3 avenue des Ternes, 75017 Paris",
     phone: "+33 (0) 1 76 58 67 37",
     whatsapp: "+33 (0) 6 68 44 10 49",
-    email: "roger@vangah-avocats.com",
-    linkedin: "https://www.linkedin.com/in/sylvestre-roger-vangah-88a775220",
+    email: "contact@cabinet-diabate.com",
+    linkedin: "https://www.linkedin.com/in/manuela-diabate-88a775220",
   };
 
   // Aperçu live des valeurs qui apparaîtront dans le pied de page
@@ -165,7 +165,7 @@ export const ContactAdmin = () => {
           <Input value={info.whatsapp_number} onChange={(e) => set("whatsapp_number", e.target.value)} placeholder={FOOTER_DEFAULTS.whatsapp} />
         </Field>
         <Field label="Lien de prise de rendez-vous (Calendly, Google Agenda, …)" hint="Optionnel — si vide, les CTA basculent sur WhatsApp">
-          <Input value={info.appointment_url} onChange={(e) => set("appointment_url", e.target.value)} placeholder="https://calendly.com/..." />
+          <Input value={info.appointment_url} onChange={(e) => set("appointment_url", e.target.value)} placeholder="https://consultation.avocat.fr/avocat-paris/..." />
         </Field>
       </section>
 
@@ -180,14 +180,14 @@ export const ContactAdmin = () => {
             <Input
               value={info.cabinet_name_fr}
               onChange={(e) => set("cabinet_name_fr", e.target.value)}
-              placeholder="Cabinet ROGER Vangah — Avocat au Barreau de Paris"
+              placeholder="Cabinet Manuela Diabate — Avocat au Barreau de Paris"
             />
           </Field>
           <Field label="Cabinet name (EN)">
             <Input
               value={info.cabinet_name_en}
               onChange={(e) => set("cabinet_name_en", e.target.value)}
-              placeholder="ROGER Vangah Law Firm — Attorney at the Paris Bar"
+              placeholder="Manuela Diabate Law Firm — Attorney at the Paris Bar"
             />
           </Field>
         </div>

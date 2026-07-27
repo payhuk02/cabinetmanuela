@@ -136,7 +136,7 @@ const Admin = () => {
   const [pinError, setPinError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = "Admin — ROGER VANGAH";
+    document.title = "Admin — Manuela DIABATE";
   }, []);
 
   // Server-side guard: re-validate role against the database via RPC.
@@ -198,7 +198,7 @@ const Admin = () => {
         <Sidebar collapsible="icon" className="admin-sidebar border-r-0">
           <SidebarHeader className="border-b border-sidebar-border bg-sidebar">
             <Link to="/" className="flex flex-col px-2 py-1 group-data-[collapsible=icon]:hidden">
-              <span className="font-serif text-lg text-sidebar-foreground">ROGER VANGAH</span>
+              <span className="font-serif text-lg text-sidebar-foreground">Manuela DIABATE</span>
               <span className="text-[10px] uppercase tracking-[0.3em] text-sidebar-foreground/70">Admin</span>
             </Link>
             <span className="hidden group-data-[collapsible=icon]:flex justify-center font-serif text-lg text-sidebar-foreground">R</span>

@@ -105,7 +105,7 @@ const NewsDetail = () => {
         .slice(0, 160)
     : "";
   const seoTitle = article
-    ? (article.seo_title?.trim() || `${article.title} — Cabinet ROGER VANGAH`)
+    ? (article.seo_title?.trim() || `${article.title} — Cabinet Manuela DIABATE`)
     : "";
   const seoDescription = article
     ? (article.seo_description?.trim() || fallbackDesc)
@@ -124,7 +124,7 @@ const NewsDetail = () => {
           alternates,
           publishedTime: article.published_date,
           modifiedTime: article.published_date,
-          author: "Cabinet ROGER VANGAH",
+          author: "Cabinet Manuela DIABATE",
           jsonLdId: "article-jsonld",
           jsonLd: {
             "@context": "https://schema.org",
@@ -138,13 +138,13 @@ const NewsDetail = () => {
                 articleSection: article.category,
                 image: seoImage ? [seoImage] : undefined,
                 mainEntityOfPage: canonical,
-                author: { "@type": "Organization", name: "Cabinet ROGER VANGAH" },
+                author: { "@type": "Organization", name: "Cabinet Manuela DIABATE" },
                 publisher: {
                   "@type": "Organization",
-                  name: "Cabinet ROGER VANGAH",
+                  name: "Cabinet Manuela DIABATE",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://www.vangah-avocats.com/og-image.jpg",
+                    url: "https://www.cabinet-diabate.com/og-image.jpg",
                   },
                 },
                 inLanguage: article.lang,

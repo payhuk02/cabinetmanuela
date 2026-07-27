@@ -8,7 +8,7 @@ const Forbidden = () => {
   const { session, signOut } = useAuth();
 
   useEffect(() => {
-    document.title = "Accès refusé (403) — ROGER VANGAH";
+    document.title = "Accès refusé (403) — Manuela DIABATE";
     // Discourage indexing of an error page.
     const meta = document.createElement("meta");
     meta.name = "robots";

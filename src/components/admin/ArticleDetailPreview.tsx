@@ -25,7 +25,7 @@ export const ArticleDetailPreview = ({
   body,
   image_url,
 }: Props) => {
-  const seoTitle = `${title || (lang === "fr" ? "Sans titre" : "Untitled")} — ROGER VANGAH`;
+  const seoTitle = `${title || (lang === "fr" ? "Sans titre" : "Untitled")} — Manuela DIABATE`;
   const stripHtml = (html: string) => html.replace(/<[^>]*>/g, "").trim();
   const seoDesc = stripHtml(excerpt).slice(0, 160) || (lang === "fr" ? "—" : "—");
 

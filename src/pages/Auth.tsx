@@ -43,7 +43,7 @@ const Auth = () => {
   const [forgotBusy, setForgotBusy] = useState(false);
 
   useEffect(() => {
-    document.title = "Connexion — ROGER VANGAH";
+    document.title = "Connexion — Manuela DIABATE";
   }, []);
 
   const onSignIn = async (e: React.FormEvent) => {

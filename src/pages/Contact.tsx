@@ -22,12 +22,12 @@ import { useSite } from "@/hooks/SiteDataContext";
 import { useText } from "@/hooks/useText";
 import { useAppointment } from "@/hooks/useAppointment";
 import { AppointmentButton } from "@/components/AppointmentButton";
-import {
+import { 
   MapPin,
   Phone,
   Mail,
   MessageCircle,
-  Linkedin,
+  Linkedin, Instagram, IdCard ,
   Clock,
   Building2,
   PhoneCall,
@@ -42,11 +42,11 @@ const heroContactPicture = heroContactPic as unknown as ResponsivePicture;
 const SESSION_KEY = "contact_send_count";
 const MAX_SENDS_PER_SESSION = 3;
 
-const ADDRESS = "3 avenue des Ternes, 75017 Paris";
-const PHONE = "+33 1 76 58 67 37";
-const WHATSAPP = "+33 6 68 44 10 49";
-const EMAIL = "roger@vangah-avocats.com";
-const LINKEDIN = "https://www.linkedin.com/in/sylvestre-roger-vangah";
+const ADDRESS = "47 Rue Rémy-DUMONCEL 75014 PARIS";
+const PHONE = "06 59 76 42 51";
+const WHATSAPP = "06 59 76 42 51";
+const EMAIL = "manuela.diabate@mdi-avocats.com";
+const LINKEDIN = "https://www.linkedin.com/in/manuela-diabate";
 const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(
   ADDRESS
 )}&output=embed`;
@@ -59,10 +59,10 @@ const Contact = () => {
   const { contact } = useSite();
   const { canonical, alternates } = buildLangAlternates("/contact", lang);
 
-  const seoTitle = useText("seo.contact.title", "Contact — Avocat à Paris | Cabinet ROGER VANGAH");
+  const seoTitle = useText("seo.contact.title", "Contact — Avocat à Paris | Cabinet Manuela DIABATE");
   const seoDescription = useText(
     "seo.contact.description",
-    `Prenez rendez-vous avec le Cabinet ROGER VANGAH, avocat au Barreau de Paris. Téléphone ${contact?.phone || PHONE} — ${contact?.address || ADDRESS}.`
+    `Prenez rendez-vous avec le Cabinet Manuela DIABATE, avocat au Barreau de Paris. Téléphone ${contact?.phone || PHONE} — ${contact?.address || ADDRESS}.`
   );
   const seoImage = useText("seo.contact.image", "");
 
@@ -86,12 +86,12 @@ const Contact = () => {
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LegalService",
-      "@id": "https://vangavo.lovable.app/#organization",
-      name: "Cabinet ROGER VANGAH",
-      url: "https://vangavo.lovable.app/contact",
+      "@id": "https://cabinet-diabate.com/#organization",
+      name: "Cabinet Manuela DIABATE",
+      url: "https://cabinet-diabate.com/contact",
       telephone: phoneClean,
       email: contact?.email || EMAIL,
-      image: "https://vangavo.lovable.app/og-image.jpg",
+      image: "https://cabinet-diabate.com/og-image.jpg",
       address: {
         "@type": "PostalAddress",
         streetAddress: streetAddr,
@@ -134,8 +134,8 @@ const Contact = () => {
   const hours =
     (contact && (lang === "fr" ? contact.hours_fr : contact.hours_en)) ||
     (lang === "fr"
-      ? "Lundi – Vendredi : 9h00 – 19h00"
-      : "Monday – Friday: 9:00 – 19:00");
+      ? "Lundi au vendredi de 9 heures- 20 heures"
+      : "Monday to Friday, 9:00 AM - 8:00 PM");
 
   const bookHref = appt.href;
 
@@ -377,15 +377,24 @@ const Contact = () => {
                 },
                 {
                   Icon: Linkedin,
-                  label: T.linkedinLabel,
+                  label: "Réseaux Sociaux",
                   content: (
-                    <a
-                      href={linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-foreground link-underline"
-                    >
-                      Sylvestre ROGER Vangah
+                    <div className="flex gap-4">
+                      <a href={linkedin} target="_blank" rel="noopener noreferrer" className="font-bold text-foreground link-underline">
+                        LinkedIn
+                      </a>
+                      <a href="https://instagram.com/manuela.diabate" target="_blank" rel="noopener noreferrer" className="font-bold text-foreground link-underline">
+                        Instagram
+                      </a>
+                    </div>
+                  ),
+                },
+                {
+                  Icon: IdCard,
+                  label: "Carte de visite numérique",
+                  content: (
+                    <a href="/carte" target="_blank" className="font-bold text-foreground link-underline text-accent">
+                      Télécharger la carte de visite
                     </a>
                   ),
                 },

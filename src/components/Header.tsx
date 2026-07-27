@@ -5,9 +5,9 @@ import { useText } from "@/hooks/useText";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
 import { MagneticButton } from "./MagneticButton";
-import logoDarkDefault from "@/assets/logo-roger-vangah-white.webp";
-import logoLightDefault from "@/assets/logo-roger-vangah-light-transparent.webp";
-import logoRvAvocat from "@/assets/logo-rv-avocat-white.webp";
+import logoDarkDefault from "@/assets/logo-manuela-diabate-white.webp";
+import logoLightDefault from "@/assets/logo-manuela-diabate-light-transparent.webp";
+import logoRvAvocat from "@/assets/logo-md-avocat-white.webp";
 import { useLogo } from "@/hooks/useLogos";
 import { AppointmentButton } from "@/components/AppointmentButton";
 
@@ -35,13 +35,11 @@ export const Header = () => {
   }, []);
 
   const links = [
-    { href: "/", label: navHome },
-    { href: "/cabinet", label: navAbout },
-    { href: "/expertises", label: navPractice },
-    { href: "/equipe", label: navTeam },
-    { href: lang === "en" ? "/news" : "/actualites", label: navNews },
-    { href: "/contact", label: navContact },
-    { href: "/carte", label: navCard },
+    { href: "/", label: "ACCUEIL" },
+    { href: "/cabinet", label: "LE CABINET" },
+    { href: "/expertises", label: "EXPERTISES" },
+    { href: lang === "en" ? "/news" : "/actualites", label: "ACTUALITES" },
+    { href: "/contact", label: "CONTACTS" },
   ];
 
   return (
@@ -53,7 +51,7 @@ export const Header = () => {
       }`}
     >
       <div className="container-luxe flex h-16 md:h-18 items-center gap-3 xl:gap-6">
-        <a href="/" className="flex items-center gap-2 md:gap-3 group min-w-0 shrink-0" aria-label="ROGER VANGAH — Retour à l'accueil">
+        <a href="/" className="flex items-center gap-2 md:gap-3 group min-w-0 shrink-0" aria-label="Manuela DIABATE — Retour à l'accueil">
           <img
             src={logoRvAvocat}
             alt="RV Avocat"
@@ -61,12 +59,12 @@ export const Header = () => {
           />
           <img
             src={logoDark}
-            alt="CABINET ROGER VANGAH"
+            alt="CABINET Manuela DIABATE"
             className="h-5 md:h-7 xl:h-8 w-auto shrink-0 hidden dark:block"
           />
           <img
             src={logoLight}
-            alt="CABINET ROGER VANGAH"
+            alt="CABINET Manuela DIABATE"
             className="h-5 md:h-7 xl:h-8 w-auto shrink-0 dark:hidden"
           />
         </a>
@@ -109,8 +107,8 @@ export const Header = () => {
       {open && (
         <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-xl text-foreground animate-fade-in lg:hidden overflow-y-auto">
           <div className="container-luxe flex h-20 items-center justify-between">
-            <img src={logoLight} alt="ROGER VANGAH" className="h-10 md:h-12 w-auto dark:hidden" />
-            <img src={logoDark} alt="ROGER VANGAH" className="h-10 md:h-12 w-auto hidden dark:block" />
+            <img src={logoLight} alt="Manuela DIABATE" className="h-10 md:h-12 w-auto dark:hidden" />
+            <img src={logoDark} alt="Manuela DIABATE" className="h-10 md:h-12 w-auto hidden dark:block" />
             <button onClick={() => setOpen(false)} aria-label="Close" className="p-2 -mr-2 text-foreground">
               <X size={24} />
             </button>

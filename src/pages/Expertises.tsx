@@ -26,11 +26,11 @@ const Expertises = () => {
 
   const seoTitle = useText(
     "seo.expertises.title",
-    "Expertises Juridiques — Avocat à Paris | ROGER VANGAH"
+    "Expertises Juridiques — Avocat à Paris | Manuela DIABATE"
   );
   const seoDescription = useText(
     "seo.expertises.description",
-    "Droit des affaires, OHADA, bancaire, immobilier, pénal, étrangers, pétrolier et minier : tous les domaines d'expertise du Cabinet ROGER VANGAH à Paris."
+    "Droit des affaires, OHADA, bancaire, immobilier, pénal, étrangers, pétrolier et minier : tous les domaines d'expertise du Cabinet Manuela DIABATE à Paris."
   );
   const seoImage = useText("seo.expertises.image", "");
 
@@ -177,7 +177,7 @@ const Expertises = () => {
                         {img && (
                           <img
                             src={img}
-                            alt={`${e.title} — illustration du domaine d'expertise du Cabinet ROGER VANGAH`}
+                            alt={`${e.title} — illustration du domaine d'expertise du Cabinet Manuela DIABATE`}
                             loading="lazy"
           decoding="async"
                             width={1024}

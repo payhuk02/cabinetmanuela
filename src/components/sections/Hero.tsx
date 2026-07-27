@@ -4,7 +4,7 @@ import { ResponsiveImage, type ResponsivePicture } from "@/components/Responsive
 import heroInkDesktop from "@/assets/hero-ink-1280.mp4";
 import heroInkMobile from "@/assets/hero-ink-854.mp4";
 import heroInkPoster from "@/assets/hero-ink-poster.jpg";
-import rvEmblem from "@/assets/rv-avocat-emblem-transparent.png";
+import rvEmblem from "@/assets/md-avocat-emblem-transparent.png";
 import scaleOfJustice from "@/assets/scale-of-justice.svg";
 /* eslint-disable import/no-unresolved */
 import imgAffaires from "@/assets/expertise-affaires.jpg?responsive";
@@ -16,7 +16,7 @@ import imgPenal from "@/assets/expertise-penal.jpg?responsive";
 import imgEtrangers from "@/assets/expertise-etrangers.jpg?responsive";
 import imgPetrolier from "@/assets/expertise-petrolier.jpg?responsive";
 import imgPalaisDeJusticeParis from "@/assets/palais-de-justice-paris.jpg?responsive";
-import imgCabinetVangahPic from "@/assets/hero-cabinet-vangah.jpg?responsive";
+import imgCabinetVangahPic from "@/assets/hero-cabinet-diabate.jpg?responsive";
 /* eslint-enable import/no-unresolved */
 
 const cabinetPicture = imgCabinetVangahPic as unknown as ResponsivePicture;
@@ -69,7 +69,7 @@ type Slide = {
 export const Hero = () => {
   const eyebrow = useText("hero.eyebrow", "Conseil & Contentieux");
   const heroTitleLine1 = useText("hero.titleLine1", "CABINET");
-  const heroTitleLine2 = useText("hero.titleLine2", "ROGER VANGAH");
+  const heroTitleLine2 = useText("hero.titleLine2", "Manuela DIABATE");
   const customHeroImage = useText("hero.image", "");
   const sectionRef = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -93,33 +93,24 @@ export const Hero = () => {
   const OVERLAY_MIN = 0;
 
   // Hooks called unconditionally at the top level (Rules of Hooks).
-  const s1Eyebrow = useText("hero.slide1.eyebrow", "CABINET\nROGER VANGAH");
-  const s1Title = useText("hero.slide1.title", "Avocat au");
-  const s1Accent = useText("hero.slide1.accent", "Barreau de Paris");
-  const s2Eyebrow = useText("hero.slide2.eyebrow", "Conseil aux entreprises");
-  const s2Title = useText("hero.slide2.title", "Droit");
-  const s2Accent = useText("hero.slide2.accent", "des affaires");
-  const s3Eyebrow = useText("hero.slide3.eyebrow", "Financements & sûretés");
-  const s3Title = useText("hero.slide3.title", "Droit bancaire");
-  const s3Accent = useText("hero.slide3.accent", "& financier");
-  const s4Eyebrow = useText("hero.slide4.eyebrow", "Restructuration");
-  const s4Title = useText("hero.slide4.title", "Surendettement");
-  const s4Accent = useText("hero.slide4.accent", "");
-  const s5Eyebrow = useText("hero.slide5.eyebrow", "Afrique des affaires");
-  const s5Title = useText("hero.slide5.title", "Droit");
-  const s5Accent = useText("hero.slide5.accent", "OHADA");
-  const s6Eyebrow = useText("hero.slide6.eyebrow", "Conseil & Contentieux");
+  const s1Eyebrow = useText("hero.slide1.eyebrow", "CABINET\nManuela DIABATE");
+  const s1Title = useText("hero.slide1.title", "Avocate au");
+  const s1Accent = useText("hero.slide1.accent", "Barreau");
+  const s2Eyebrow = useText("hero.slide2.eyebrow", "Expertise");
+  const s2Title = useText("hero.slide2.title", "Droit des");
+  const s2Accent = useText("hero.slide2.accent", "étrangers");
+  const s3Eyebrow = useText("hero.slide3.eyebrow", "Protection");
+  const s3Title = useText("hero.slide3.title", "Droit de");
+  const s3Accent = useText("hero.slide3.accent", "l'asile");
+  const s4Eyebrow = useText("hero.slide4.eyebrow", "Accompagnement");
+  const s4Title = useText("hero.slide4.title", "Droit de");
+  const s4Accent = useText("hero.slide4.accent", "la famille");
+  const s5Eyebrow = useText("hero.slide5.eyebrow", "Séparation");
+  const s5Title = useText("hero.slide5.title", "Procédure");
+  const s5Accent = useText("hero.slide5.accent", "de divorce");
+  const s6Eyebrow = useText("hero.slide6.eyebrow", "Protection");
   const s6Title = useText("hero.slide6.title", "Droit");
-  const s6Accent = useText("hero.slide6.accent", "immobilier");
-  const s7Eyebrow = useText("hero.slide7.eyebrow", "Défense pénale");
-  const s7Title = useText("hero.slide7.title", "Droit pénal");
-  const s7Accent = useText("hero.slide7.accent", "des affaires");
-  const s8Eyebrow = useText("hero.slide8.eyebrow", "Mobilité internationale");
-  const s8Title = useText("hero.slide8.title", "Droit");
-  const s8Accent = useText("hero.slide8.accent", "des étrangers");
-  const s9Eyebrow = useText("hero.slide9.eyebrow", "Industries extractives");
-  const s9Title = useText("hero.slide9.title", "Droit pétrolier");
-  const s9Accent = useText("hero.slide9.accent", "& minier");
+  const s6Accent = useText("hero.slide6.accent", "des enfants");
 
   // Custom slide images uploaded from admin (overrides default responsive bundles).
   const s1Img = useText("hero.slide1.image", "");
@@ -188,15 +179,11 @@ export const Hero = () => {
   // (via `image` simple) ; sinon on garde le bundle responsive d'origine.
   const slides: Slide[] = [
     { image: s1Img || null, picture: s1Img ? undefined : palaisDeJusticeParis, eyebrow: s1Eyebrow, title: s1Title, accent: s1Accent, colorEyebrow: c1e, colorTitle: c1t, colorAccent: c1a, sizeEyebrow: sz1e, sizeTitle: sz1t },
-    { image: null, picture: picAffaires, eyebrow, title: heroTitleLine1, accent: heroTitleLine2, colorEyebrow: c1e, colorTitle: c1t, colorAccent: c1a, sizeEyebrow: sz1e, sizeTitle: sz1t },
-    { image: s2Img || null, picture: s2Img ? undefined : picAffaires, eyebrow: s2Eyebrow, title: s2Title, accent: s2Accent, colorEyebrow: c2e, colorTitle: c2t, colorAccent: c2a, sizeEyebrow: sz2e, sizeTitle: sz2t },
-    { image: s3Img || null, picture: s3Img ? undefined : picBancaire, eyebrow: s3Eyebrow, title: s3Title, accent: s3Accent, colorEyebrow: c3e, colorTitle: c3t, colorAccent: c3a, sizeEyebrow: sz3e, sizeTitle: sz3t },
-    { image: s4Img || null, picture: s4Img ? undefined : picSurendettement, eyebrow: s4Eyebrow, title: s4Title, accent: s4Accent, colorEyebrow: c4e, colorTitle: c4t, colorAccent: c4a, sizeEyebrow: sz4e, sizeTitle: sz4t },
-    { image: s5Img || null, picture: s5Img ? undefined : picOhada, eyebrow: s5Eyebrow, title: s5Title, accent: s5Accent, colorEyebrow: c5e, colorTitle: c5t, colorAccent: c5a, sizeEyebrow: sz5e, sizeTitle: sz5t },
-    { image: s6Img || null, picture: s6Img ? undefined : picImmobilier, eyebrow: s6Eyebrow, title: s6Title, accent: s6Accent, colorEyebrow: c6e, colorTitle: c6t, colorAccent: c6a, sizeEyebrow: sz6e, sizeTitle: sz6t },
-    { image: s7Img || null, picture: s7Img ? undefined : picPenal, eyebrow: s7Eyebrow, title: s7Title, accent: s7Accent, colorEyebrow: c7e, colorTitle: c7t, colorAccent: c7a, sizeEyebrow: sz7e, sizeTitle: sz7t },
-    { image: s8Img || null, picture: s8Img ? undefined : picEtrangers, eyebrow: s8Eyebrow, title: s8Title, accent: s8Accent, colorEyebrow: c8e, colorTitle: c8t, colorAccent: c8a, sizeEyebrow: sz8e, sizeTitle: sz8t },
-    { image: s9Img || null, picture: s9Img ? undefined : picPetrolier, eyebrow: s9Eyebrow, title: s9Title, accent: s9Accent, colorEyebrow: c9e, colorTitle: c9t, colorAccent: c9a, sizeEyebrow: sz9e, sizeTitle: sz9t },
+    { image: s2Img || null, picture: s2Img ? undefined : picEtrangers, eyebrow: s2Eyebrow, title: s2Title, accent: s2Accent, colorEyebrow: c2e, colorTitle: c2t, colorAccent: c2a, sizeEyebrow: sz2e, sizeTitle: sz2t },
+    { image: s3Img || null, picture: s3Img ? undefined : picPenal, eyebrow: s3Eyebrow, title: s3Title, accent: s3Accent, colorEyebrow: c3e, colorTitle: c3t, colorAccent: c3a, sizeEyebrow: sz3e, sizeTitle: sz3t },
+    { image: s4Img || null, picture: s4Img ? undefined : picAffaires, eyebrow: s4Eyebrow, title: s4Title, accent: s4Accent, colorEyebrow: c4e, colorTitle: c4t, colorAccent: c4a, sizeEyebrow: sz4e, sizeTitle: sz4t },
+    { image: s5Img || null, picture: s5Img ? undefined : picImmobilier, eyebrow: s5Eyebrow, title: s5Title, accent: s5Accent, colorEyebrow: c5e, colorTitle: c5t, colorAccent: c5a, sizeEyebrow: sz5e, sizeTitle: sz5t },
+    { image: s6Img || null, picture: s6Img ? undefined : picBancaire, eyebrow: s6Eyebrow, title: s6Title, accent: s6Accent, colorEyebrow: c6e, colorTitle: c6t, colorAccent: c6a, sizeEyebrow: sz6e, sizeTitle: sz6t },
   ];
 
   const handleEnded = () => {
@@ -319,7 +306,7 @@ export const Hero = () => {
         {customHeroImage && (
           <img
             src={customHeroImage}
-            alt="Maître ROGER VANGAH — CABINET ROGER VANGAH"
+            alt="Maître MANUELA VANGAH — CABINET Manuela DIABATE"
             className="h-full w-full object-cover"
             loading="eager"
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -338,7 +325,7 @@ export const Hero = () => {
               <div key={`pic-${i}`} className={wrapperClass} style={wrapperStyle} aria-hidden="true">
                 <ResponsiveImage
                   data={s.picture}
-                  alt={s.title ? `Illustration pour ${s.title}` : "Cabinet ROGER VANGAH"}
+                  alt={s.title ? `Illustration pour ${s.title}` : "Cabinet Manuela DIABATE"}
                   sizes="100vw"
                   loading={i === 0 ? "eager" : "lazy"}
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -353,7 +340,7 @@ export const Hero = () => {
             <img
               key={`${s.image}-${i}`}
               src={s.image ?? undefined}
-              alt={s.title ? `Illustration pour ${s.title}` : "Cabinet ROGER VANGAH"}
+              alt={s.title ? `Illustration pour ${s.title}` : "Cabinet Manuela DIABATE"}
               aria-hidden="true"
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
@@ -431,7 +418,7 @@ export const Hero = () => {
             {/* Emblème RV transparent au centre */}
             <img
               src={rvEmblem}
-              alt="Logo du Cabinet ROGER VANGAH"
+              alt="Logo du Cabinet Manuela DIABATE"
               loading="eager"
               width={1024}
               height={1024}

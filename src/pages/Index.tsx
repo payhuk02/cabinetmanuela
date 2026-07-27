@@ -23,8 +23,8 @@ const Index = () => {
   const seoTitle = useText(
     "seo.home.title",
     lang === "fr"
-      ? "Avocat à Paris — Droit des Affaires & OHADA | ROGER VANGAH"
-      : "Paris Lawyer — ROGER VANGAH Law Firm | Business & OHADA"
+      ? "Avocat à Paris — Droit des Affaires & OHADA | Manuela DIABATE"
+      : "Paris Lawyer — Manuela DIABATE Law Firm | Business & OHADA"
   );
   const seoDescription = useText(
     "seo.home.description",
@@ -32,7 +32,7 @@ const Index = () => {
       ? "Cabinet d'avocats à Paris spécialisé en droit des affaires, OHADA, immobilier, pénal et droit des étrangers. Conseil et contentieux France-Afrique."
       : "Paris law firm: business law, OHADA, real estate, criminal, immigration. Advisory & litigation between France and Africa."
   );
-  const jsonLdName = useText("seo.home.jsonld.name", "Cabinet ROGER VANGAH");
+  const jsonLdName = useText("seo.home.jsonld.name", "Cabinet Manuela DIABATE");
   const jsonLdDesc = useText(
     "seo.home.jsonld.description",
     "Cabinet d'avocats à Paris — droit des affaires, OHADA, immobilier, contentieux et conseil international."
@@ -60,12 +60,12 @@ const Index = () => {
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LegalService",
-      "@id": "https://vangavo.lovable.app/#organization",
+      "@id": "https://cabinet-diabate.com/#organization",
       name: jsonLdName,
-      legalName: "Cabinet ROGER VANGAH",
+      legalName: "Cabinet Manuela DIABATE",
       description: jsonLdDesc,
-      image: "https://vangavo.lovable.app/og-image.jpg",
-      logo: "https://vangavo.lovable.app/og-image.jpg",
+      image: "https://cabinet-diabate.com/og-image.jpg",
+      logo: "https://cabinet-diabate.com/og-image.jpg",
       address: {
         "@type": "PostalAddress",
         streetAddress: street,
@@ -82,10 +82,10 @@ const Index = () => {
       ],
       knowsLanguage: ["fr", "en"],
       telephone: phoneClean,
-      email: contact?.email || "roger@vangah-avocats.com",
+      email: contact?.email || "contact@cabinet-diabate.com",
       priceRange: "€€€",
-      url: typeof window !== "undefined" ? window.location.origin : "https://vangavo.lovable.app",
-      sameAs: [contact?.linkedin_url || "https://www.linkedin.com/in/sylvestre-roger-vangah"].filter(Boolean),
+      url: typeof window !== "undefined" ? window.location.origin : "https://cabinet-diabate.com",
+      sameAs: [contact?.linkedin_url || "https://www.linkedin.com/in/manuela-diabate"].filter(Boolean),
       contactPoint: {
         "@type": "ContactPoint",
         telephone: phoneClean,
@@ -109,11 +109,20 @@ const Index = () => {
         <Hero />
         <About />
         <Strengths />
-        <Practice />
-        <News />
-        <CTA />
+        <section className="py-16 md:py-24 bg-primary text-primary-foreground text-center px-4">
+          <div className="container-luxe max-w-4xl mx-auto">
+            <blockquote className="font-serif text-2xl md:text-4xl italic leading-relaxed text-primary-foreground/90">
+              "La justice n'est pas une simple procédure, c'est un droit fondamental. 
+              Notre mission est de vous accompagner avec humanité et détermination pour le faire valoir."
+            </blockquote>
+            <div className="mt-8 flex items-center justify-center gap-4 text-accent">
+              <div className="h-px w-12 bg-accent/50" />
+              <p className="font-bold tracking-widest uppercase text-sm">Maître Manuela DIABATE</p>
+              <div className="h-px w-12 bg-accent/50" />
+            </div>
+          </div>
+        </section>
         <Contact />
-        <NewsTicker />
       </main>
       <Footer />
       <FloatingActions />

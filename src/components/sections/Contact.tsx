@@ -35,8 +35,8 @@ const MAX_SENDS_PER_SESSION = 3;
 const ADDRESS = "3 avenue des Ternes, 75017 Paris";
 const PHONE = "+33 1 76 58 67 37";
 const WHATSAPP = "+33 6 68 44 10 49";
-const EMAIL = "roger@vangah-avocats.com";
-const LINKEDIN = "https://www.linkedin.com/in/sylvestre-roger-vangah";
+const EMAIL = "contact@cabinet-diabate.com";
+const LINKEDIN = "https://www.linkedin.com/in/manuela-diabate";
 const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(
   ADDRESS
 )}&output=embed`;
@@ -86,7 +86,7 @@ export const Contact = () => {
       messagePh: "Décrivez brièvement votre situation…",
       optional: "(facultatif)",
       genericError: "Une erreur est survenue. Merci de réessayer.",
-      linkedinName: "Sylvestre ROGER Vangah",
+      linkedinName: "Sylvestre Manuela Diabate",
       confidentialNote: "Vos informations restent strictement confidentielles.",
       mapLoading: "Chargement de la carte…",
     },
@@ -106,7 +106,7 @@ export const Contact = () => {
       messagePh: "Briefly describe your situation…",
       optional: "(optional)",
       genericError: "An error occurred. Please try again.",
-      linkedinName: "Sylvestre ROGER Vangah",
+      linkedinName: "Sylvestre Manuela Diabate",
       confidentialNote: "Your information remains strictly confidential.",
       mapLoading: "Loading map…",
     },

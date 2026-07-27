@@ -11,8 +11,8 @@ const NotFound = () => {
   useEffect(() => {
     document.title =
       lang === "fr"
-        ? "Page non trouvée — Cabinet ROGER VANGAH"
-        : "Page not found — ROGER VANGAH Law Firm";
+        ? "Page non trouvée — Cabinet Manuela DIABATE"
+        : "Page not found — Manuela DIABATE Law Firm";
     // Tell search engines this page should not be indexed.
     let robots = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]');
     if (!robots) {

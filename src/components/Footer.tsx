@@ -3,19 +3,20 @@ import { useSite } from "@/hooks/SiteDataContext";
 import { useText } from "@/hooks/useText";
 import { LangSwitcher } from "./LangSwitcher";
 import { Link } from "react-router-dom";
-import logoDefault from "@/assets/logo-roger-vangah-night.webp";
-import logoRvAvocat from "@/assets/logo-rv-avocat-night.webp";
+import logoDefault from "@/assets/logo-manuela-diabate-night.webp";
+import logoRvAvocat from "@/assets/logo-md-avocat-night.webp";
 import { useLogo } from "@/hooks/useLogos";
 import { useExpertises } from "@/hooks/useExpertises";
-import { MapPin, Phone, Mail, Linkedin, MessageCircle, Building2 } from "lucide-react";
+import {  MapPin, Phone, Mail, Linkedin, Instagram , MessageCircle, Building2 } from "lucide-react";
 
-const DEFAULT_ADDRESS = "3 avenue des Ternes, 75017 Paris";
-const DEFAULT_PHONE = "+33 (0) 1 76 58 67 37";
-const DEFAULT_WHATSAPP = "+33 (0) 6 68 44 10 49";
-const DEFAULT_EMAIL = "roger@vangah-avocats.com";
+const DEFAULT_ADDRESS = "47 Rue Rémy-DUMONCEL 75014 PARIS";
+const DEFAULT_PHONE = "06 59 76 42 51";
+const DEFAULT_WHATSAPP = "06 59 76 42 51";
+const DEFAULT_EMAIL = "manuela.diabate@mdi-avocats.com";
 const DEFAULT_LINKEDIN_PERSO =
-  "https://www.linkedin.com/in/sylvestre-roger-vangah-88a775220";
+  "https://www.linkedin.com/in/manuela-diabate-88a775220";
 const LINKEDIN_CABINET = "https://www.linkedin.com/company/109573759";
+const INSTAGRAM = "https://instagram.com/manuela.diabate";
 
 export const Footer = () => {
   const { t, lang } = useLang();
@@ -68,7 +69,7 @@ export const Footer = () => {
             />
             <img
               src={logo}
-              alt="Logo complet du CABINET ROGER VANGAH - Droit des affaires"
+              alt="Logo complet du CABINET Manuela DIABATE - Droit des affaires"
               className="h-20 md:h-24 w-auto"
             />
           </div>
@@ -166,7 +167,7 @@ export const Footer = () => {
                   href={linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn — Sylvestre ROGER Vangah"
+                  aria-label="LinkedIn — Sylvestre Manuela Diabate"
                   title={lang === "fr" ? "LinkedIn personnel" : "Personal LinkedIn"}
                   className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors"
                 >
@@ -239,7 +240,7 @@ export const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-luxe py-6 text-xs text-primary-foreground/50 flex flex-col md:flex-row justify-between gap-3 md:items-center">
           <p>
-            © {new Date().getFullYear()} ROGER VANGAH. {rights}
+            © {new Date().getFullYear()} Manuela DIABATE. {rights}
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <a href="#" className="hover:text-accent transition-colors">

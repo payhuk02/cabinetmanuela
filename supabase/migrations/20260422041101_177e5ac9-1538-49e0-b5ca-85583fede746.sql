@@ -90,4 +90,4 @@ INSERT INTO public.expertises (slug, title, icon, tagline, intro, approach, conc
   'Sécuriser vos investissements dans un secteur stratégique et hautement régulé.',
   '[]'::jsonb, '[]'::jsonb, '[]'::jsonb,
   8, true
-);
+) ON CONFLICT (slug) DO NOTHING;

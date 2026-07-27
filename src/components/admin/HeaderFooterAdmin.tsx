@@ -16,7 +16,7 @@ const GROUPS: GroupDef[] = [
   {
     label: "Footer — Tagline & titres de colonnes",
     keys: [
-      { key: "footer.tagline", label: "Tagline (sous le logo)", multiline: true, defaultValue: "Cabinet ROGER VANGAH" },
+      { key: "footer.tagline", label: "Tagline (sous le logo)", multiline: true, defaultValue: "Cabinet Manuela DIABATE" },
       { key: "footer.usefulLinks", label: "Titre colonne « Liens utiles »", defaultValue: "Liens utiles" },
       { key: "footer.expertisesTitle", label: "Titre colonne « Nos expertises »", defaultValue: "Nos expertises" },
       { key: "footer.contactTitle", label: "Titre colonne « Contact »", defaultValue: "Contact" },

@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { AppointmentButton } from "@/components/AppointmentButton";
 import { useLang } from "@/i18n/LanguageContext";
 import { useText } from "@/hooks/useText";
-import portrait480 from "@/assets/team/roger-vangah-480.webp";
-import portrait800 from "@/assets/team/roger-vangah-800.webp";
-import portrait1280 from "@/assets/team/roger-vangah-1280.webp";
+import portrait480 from "@/assets/team/manuela-diabate-480.webp";
+import portrait800 from "@/assets/team/manuela-diabate-800.webp";
+import portrait1280 from "@/assets/team/manuela-diabate-1280.webp";
 
 const domains = [
   { icon: Briefcase, key: "about.domain1", fallback: "Droit des affaires" },
@@ -24,7 +24,7 @@ export const About = () => {
   );
   const ctaPrimary = useText("hero.cta", t.hero.cta);
   const ctaSecondary = useText("hero.ctaSecondary", t.nav.contact);
-  const titlePrefix = useText("about.titlePrefix", "Maître ROGER");
+  const titlePrefix = useText("about.titlePrefix", "Maître MANUELA");
   const titleAccent = useText("about.titleAccent", "VANGAH");
   const p1 = useText("about.p1", t.about.presentation.p1);
   const p2 = useText("about.p2", t.about.presentation.p2);
@@ -70,7 +70,7 @@ export const About = () => {
                   : `${portrait480} 480w, ${portrait800} 800w, ${portrait1280} 1280w`
               }
               sizes="(min-width: 1280px) 560px, (min-width: 1024px) 480px, (min-width: 640px) 420px, 92vw"
-              alt="Portrait de Maître ROGER VANGAH, avocat expert en droit des affaires"
+              alt="Portrait de Maître Manuela DIABATE, avocat expert en droit des affaires"
               loading="lazy"
               decoding="async"
               width={848}

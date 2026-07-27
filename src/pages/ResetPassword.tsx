@@ -19,7 +19,7 @@ const ResetPassword = () => {
   const [hasRecovery, setHasRecovery] = useState<boolean | null>(null);
 
   useEffect(() => {
-    document.title = "Réinitialiser le mot de passe — ROGER VANGAH";
+    document.title = "Réinitialiser le mot de passe — Manuela DIABATE";
 
     // Supabase places `type=recovery` in the URL hash after email link.
     const hash = window.location.hash || "";

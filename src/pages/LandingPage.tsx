@@ -102,7 +102,7 @@ const LandingPage = () => {
     return {
       "@context": "https://schema.org",
       "@type": "LegalService",
-      name: `Cabinet ROGER VANGAH — ${page.city}`,
+      name: `Cabinet Manuela DIABATE — ${page.city}`,
       description: metaDesc,
       url: canonical,
       areaServed: [page.city, page.country].filter(Boolean),

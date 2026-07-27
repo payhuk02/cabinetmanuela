@@ -4,7 +4,7 @@ import { ContentSectionEditor, GroupDef } from "./sections/ContentSectionEditor"
 // (Hero.tsx, About.tsx, Strengths.tsx, Practice.tsx, NewsSection.tsx, CTA.tsx,
 // Contact.tsx, Index.tsx). Keep them in sync if you ever change the source.
 const ABOUT_P1 =
-  "Avocat passionné et engagé, inscrit au Barreau de Paris, Maître ROGER VANGAH accompagne ses clients avec rigueur et détermination, tant en Conseil qu'en Contentieux.";
+  "Avocat passionné et engagé, inscrit au Barreau de Paris, Maître Manuela DIABATE accompagne ses clients avec rigueur et détermination, tant en Conseil qu'en Contentieux.";
 const ABOUT_P2 =
   "Fort d'un parcours professionnel enrichissant, Maître VANGAH a exercé au sein de cabinets d'avocats de renom en Côte d'Ivoire et en France, ainsi qu'au sein d'entreprises internationales. Ces expériences variées lui ont permis de développer une approche globale et pragmatique des problématiques juridiques, répondant aux exigences d'une clientèle diversifiée.";
 const ABOUT_P3 =
@@ -12,7 +12,7 @@ const ABOUT_P3 =
 const ABOUT_P4 =
   "Cette double compétence franco-africaine lui permet d'appréhender avec finesse des problématiques complexes à l'échelle internationale dans plusieurs domaines du droit, tels que le droit des affaires (sociétés, bancaires et financiers, conflits entre associés…), droit immobilier (baux, copropriétés, constructions), droit des étrangers (visas, titres de séjour, naturalisation, asile).";
 const ABOUT_P5 =
-  "Maître ROGER VANGAH s'engage à défendre vos intérêts avec passion, rigueur, et détermination, en vous offrant un accompagnement juridique sur mesure adapté à vos besoins spécifiques.";
+  "Maître Manuela DIABATE s'engage à défendre vos intérêts avec passion, rigueur, et détermination, en vous offrant un accompagnement juridique sur mesure adapté à vos besoins spécifiques.";
 
 const GROUPS: GroupDef[] = [
   {
@@ -20,7 +20,7 @@ const GROUPS: GroupDef[] = [
     keys: [
       { key: "hero.eyebrow", label: "Eyebrow", defaultValue: "Conseil & Contentieux" },
       { key: "hero.titleLine1", label: "Titre — ligne 1", defaultValue: "CABINET" },
-      { key: "hero.titleLine2", label: "Titre — ligne 2 (italique doré)", defaultValue: "ROGER VANGAH" },
+      { key: "hero.titleLine2", label: "Titre — ligne 2 (italique doré)", defaultValue: "Manuela DIABATE" },
       { key: "hero.subtitle", label: "Sous-titre", multiline: true, defaultValue: "Conseil & Contentieux — Expertise France & Afrique." },
       { key: "hero.cta", label: "Bouton principal (RDV)", defaultValue: "Prendre rendez-vous" },
       { key: "hero.ctaSecondary", label: "Bouton secondaire (Contact)", defaultValue: "Contact" },
@@ -44,7 +44,7 @@ const GROUPS: GroupDef[] = [
   {
     label: "Hero — Carrousel (9 slides)",
     keys: [
-      { key: "hero.slide1.eyebrow", label: "Slide 1 — Eyebrow", multiline: true, defaultValue: "CABINET\nROGER VANGAH" },
+      { key: "hero.slide1.eyebrow", label: "Slide 1 — Eyebrow", multiline: true, defaultValue: "CABINET\nManuela DIABATE" },
       { key: "hero.slide1.title", label: "Slide 1 — Titre", defaultValue: "Avocat au" },
       { key: "hero.slide1.accent", label: "Slide 1 — Accent doré", defaultValue: "Barreau de Paris" , clearable: true },
       { key: "hero.slide2.eyebrow", label: "Slide 2 — Eyebrow", defaultValue: "Conseil aux entreprises" },
@@ -145,7 +145,7 @@ const GROUPS: GroupDef[] = [
     label: "Cabinet (présentation)",
     keys: [
       { key: "about.eyebrow", label: "Eyebrow", defaultValue: "Présentation" },
-      { key: "about.titlePrefix", label: "Titre — préfixe", defaultValue: "Maître ROGER" },
+      { key: "about.titlePrefix", label: "Titre — préfixe", defaultValue: "Maître MANUELA" },
       { key: "about.titleAccent", label: "Titre — mot doré", defaultValue: "VANGAH" },
       { key: "about.portrait", label: "Portrait (URL personnalisée) — vide = portrait par défaut", defaultValue: "", clearable: true },
       { key: "about.p1", label: "Paragraphe 1", multiline: true, defaultValue: ABOUT_P1 },
@@ -222,7 +222,7 @@ const GROUPS: GroupDef[] = [
     keys: [
       { key: "contact.whatsappLabel", label: "Libellé « WhatsApp »", defaultValue: "WhatsApp" },
       { key: "contact.linkedinLabel", label: "Libellé « LinkedIn »", defaultValue: "LinkedIn" },
-      { key: "contact.linkedinName", label: "Nom affiché à côté du lien LinkedIn", defaultValue: "Sylvestre ROGER Vangah" },
+      { key: "contact.linkedinName", label: "Nom affiché à côté du lien LinkedIn", defaultValue: "Sylvestre Manuela Diabate" },
       { key: "contact.directions", label: "Lien « Itinéraire »", defaultValue: "Itinéraire" },
       { key: "contact.mapTitle", label: "Titre de la carte (accessibilité)", defaultValue: "Localisation du cabinet" },
       { key: "contact.mapLoading", label: "Texte « Chargement de la carte… »", defaultValue: "Chargement de la carte…" },

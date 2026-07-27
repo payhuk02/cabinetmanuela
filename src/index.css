@@ -4,73 +4,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ROGER VANGAH — Design System
-   Bleu nuit, blanc ivoire, touches dorées
+/* Cabinet Manuela DIABATE — Design System
+   Bleu, Blanc, Noir
    All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 36 33% 97%;
-    --foreground: 222 45% 11%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 45% 11%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 45% 11%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Bleu nuit profond */
-    --primary: 222 47% 13%;
-    --primary-foreground: 36 33% 97%;
-    --primary-glow: 222 50% 22%;
+    /* Premium Blue */
+    --primary: 217 91% 33%; /* Royal Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+    --primary-glow: 217 91% 40%;
 
-    --secondary: 36 25% 92%;
-    --secondary-foreground: 222 47% 13%;
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 36 20% 94%;
-    --muted-foreground: 222 15% 38%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
 
-    /* Or champagne */
-    --accent: 41 55% 52%;
-    --accent-foreground: 222 47% 13%;
-    --accent-soft: 41 60% 88%;
+    /* Accent - Noir/Dark Grey */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 0 0% 95%;
 
-    /* Bleu CTA — style des boutons rendez-vous */
-    --appointment: 226 71% 40%;
+    /* CTA */
+    --appointment: 217 91% 33%;
     --appointment-foreground: 0 0% 100%;
 
-    --destructive: 0 70% 45%;
-    --destructive-foreground: 36 33% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    /* Bleu nuit utilisé sur les fonds sombres / floating actions */
-    --night: 222 47% 9%;
+    /* Noir used for dark backgrounds */
+    --night: 0 0% 5%;
 
     /* Statuts éditoriaux (admin previews) */
     --status-live: 152 60% 38%;
-    --status-live-foreground: 36 33% 97%;
+    --status-live-foreground: 0 0% 100%;
     --status-draft: 38 92% 52%;
-    --status-draft-foreground: 222 47% 9%;
+    --status-draft-foreground: 0 0% 5%;
 
     /* WhatsApp brand */
     --whatsapp: 142 70% 49%;
     --whatsapp-foreground: 0 0% 100%;
 
-    --border: 36 20% 86%;
-    --input: 36 20% 88%;
-    --ring: 41 55% 52%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 217 91% 33%;
 
     --radius: 0.25rem;
 
     /* Gradients */
-    --gradient-night: linear-gradient(135deg, hsl(222 47% 9%) 0%, hsl(222 50% 18%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(41 60% 58%) 0%, hsl(38 70% 45%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsl(222 47% 9% / 0.55) 0%, hsl(222 47% 9% / 0.85) 100%);
+    --gradient-night: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 15%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(217 91% 33%) 0%, hsl(217 91% 25%) 100%); /* Renamed gradient-gold to use blue but keep class name for now */
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.55) 0%, hsl(0 0% 0% / 0.85) 100%);
 
     /* Shadows */
-    --shadow-elegant: 0 30px 80px -30px hsl(222 47% 13% / 0.35);
-    --shadow-gold: 0 20px 50px -20px hsl(41 55% 52% / 0.45);
-    --shadow-soft: 0 8px 30px -10px hsl(222 47% 13% / 0.15);
+    --shadow-elegant: 0 30px 80px -30px hsl(0 0% 0% / 0.2);
+    --shadow-gold: 0 20px 50px -20px hsl(217 91% 33% / 0.3); /* Uses primary blue */
+    --shadow-soft: 0 8px 30px -10px hsl(0 0% 0% / 0.1);
 
     /* Transitions */
     --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
@@ -85,36 +85,36 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  /* Admin sidebar — bleu profond (#1E40AF) */
+  /* Admin sidebar */
   .admin-sidebar {
-    --sidebar-background: 224 76% 28%;          /* bleu profond */
-    --sidebar-foreground: 210 40% 98%;          /* texte clair */
-    --sidebar-primary: 210 40% 98%;
-    --sidebar-primary-foreground: 224 76% 22%;
-    --sidebar-accent: 224 70% 38%;              /* hover */
+    --sidebar-background: 217 91% 33%;          
+    --sidebar-foreground: 0 0% 100%;          
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 217 91% 33%;
+    --sidebar-accent: 217 91% 25%;              
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 224 60% 22%;
+    --sidebar-border: 217 91% 25%;
     --sidebar-ring: 210 90% 70%;
   }
 
   .dark {
-    --background: 222 47% 8%;
-    --foreground: 36 33% 95%;
-    --card: 222 47% 11%;
-    --card-foreground: 36 33% 95%;
-    --popover: 222 47% 11%;
-    --popover-foreground: 36 33% 95%;
-    --primary: 36 33% 95%;
-    --primary-foreground: 222 47% 13%;
-    --secondary: 222 40% 18%;
-    --secondary-foreground: 36 33% 95%;
-    --muted: 222 40% 18%;
-    --muted-foreground: 36 15% 70%;
-    --accent: 41 55% 52%;
-    --accent-foreground: 222 47% 13%;
-    --border: 222 40% 20%;
-    --input: 222 40% 20%;
-    --ring: 41 55% 52%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 50%; /* Brighter blue for dark mode */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 95%; /* White accent */
+    --accent-foreground: 0 0% 5%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 217 91% 50%;
   }
 }
 

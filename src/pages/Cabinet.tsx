@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
+import { About } from "@/components/sections/About";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -21,7 +22,7 @@ const Cabinet = () => {
   // Hero
   const heroEyebrow = useText("cabinet.eyebrow", "Cabinet");
   const heroTitlePrefix = useText("cabinet.heroTitlePrefix", "Cabinet");
-  const heroTitleAccent = useText("cabinet.heroTitleAccent", "ROGER VANGAH");
+  const heroTitleAccent = useText("cabinet.heroTitleAccent", "Manuela DIABATE");
   const heroSubtitle = useText(
     "cabinet.heroSubtitle",
     "Un partenaire juridique entre la France et l'Afrique."
@@ -31,32 +32,32 @@ const Cabinet = () => {
   const portraitSrc = useText("cabinet.portrait", "");
 
   // Présentation
-  const presEyebrow = useText("cabinet.presentation.eyebrow", "Présentation");
-  const presTitlePrefix = useText("cabinet.presentation.titlePrefix", "Un cabinet");
-  const presTitleAccent = useText("cabinet.presentation.titleAccent", "à votre image");
+  const presEyebrow = useText("cabinet.presentation.eyebrow", "Notre histoire");
+  const presTitlePrefix = useText("cabinet.presentation.titlePrefix", "Le Cabinet");
+  const presTitleAccent = useText("cabinet.presentation.titleAccent", "Manuela DIABATE");
   const presLead = useText(
     "cabinet.presentation.lead",
-    "Conseil stratégique & contentieux, en France et à l'international."
+    "Un cabinet fondé en 2018 avec une motivation claire : l'excellence au service de vos droits."
   );
   const presP1 = useText(
     "cabinet.presentation.p1",
-    "Cabinet ROGER VANGAH est fondé par Maître ROGER VANGAH, avocat inscrit au Barreau de Paris."
+    "Créé pour répondre aux enjeux juridiques complexes de notre époque, le Cabinet Manuela DIABATE accompagne une clientèle diversifiée. Animé par la volonté d'offrir une défense juste et stratégique, le cabinet s'est rapidement imposé comme un acteur de confiance."
   );
   const presP2 = useText(
     "cabinet.presentation.p2",
-    "Le cabinet accompagne une clientèle composée d'entreprises, d'investisseurs, d'institutions et de particuliers dans la gestion de leurs enjeux juridiques et stratégiques, en France comme à l'international. Il se distingue par une approche exigeante du droit, fondée sur la rigueur, la confidentialité et la recherche constante de solutions juridiques efficaces et sécurisées."
+    "Nos particularités résident dans notre approche sur mesure : chaque dossier est traité avec une rigueur absolue et une profonde humanité. Nous croyons que derrière chaque affaire juridique se trouvent des vies et des projets nécessitant protection et accompagnement."
   );
   const presP3 = useText(
     "cabinet.presentation.p3",
-    "Cabinet ROGER VANGAH développe une pratique orientée vers le conseil stratégique et le contentieux, en mettant au service de ses clients une expertise juridique solide et une compréhension fine des environnements économiques dans lesquels ils évoluent. Son intervention vise à anticiper les risques, sécuriser les opérations et défendre avec détermination les intérêts de ses clients devant les juridictions compétentes."
+    "Le cabinet se distingue par sa réactivité, son accessibilité et sa capacité à apporter des solutions pragmatiques et sécurisées, que ce soit en conseil stratégique ou en phase contentieuse."
   );
   const presP4 = useText(
     "cabinet.presentation.p4",
-    "Alliant exigence professionnelle, sens de la stratégie et engagement au service des intérêts de ses clients, le cabinet s'inscrit dans une démarche d'excellence et d'efficacité, au service d'une pratique moderne et internationale du droit."
+    "Alliant exigence professionnelle, sens de la stratégie et engagement indéfectible, nous nous inscrivons dans une démarche d'excellence et d'efficacité."
   );
   const presQuote = useText(
     "cabinet.presentation.quote",
-    "Par son positionnement et sa vision, le Cabinet ROGER VANGAH se veut un partenaire juridique de confiance, capable d'offrir à ses clients un accompagnement sur mesure dans des contextes juridiques et économiques complexes entre la France et l'Afrique."
+    "Par son positionnement et sa vision, le Cabinet Manuela DIABATE se veut un partenaire juridique de confiance, capable d'offrir à ses clients un accompagnement sur mesure."
   );
 
   // Valeurs
@@ -88,7 +89,7 @@ const Cabinet = () => {
 
   const seoTitle = useText(
     "seo.cabinet.title",
-    "Le Cabinet ROGER VANGAH — Avocats d'Affaires à Paris"
+    "Le Cabinet Manuela DIABATE — Avocats d'Affaires à Paris"
   );
   const seoDescription = useText(
     "seo.cabinet.description",
@@ -110,15 +111,15 @@ const Cabinet = () => {
       "@type": "AboutPage",
       name: seoTitle,
       description: seoDescription,
-      url: "https://vangavo.lovable.app/cabinet",
+      url: "https://cabinet-diabate.com/cabinet",
       inLanguage: lang === "en" ? "en" : "fr",
       mainEntity: {
         "@type": "LegalService",
-        "@id": "https://vangavo.lovable.app/#organization",
-        name: "Cabinet ROGER VANGAH",
-        url: "https://vangavo.lovable.app",
-        image: "https://vangavo.lovable.app/og-image.jpg",
-        logo: "https://vangavo.lovable.app/og-image.jpg",
+        "@id": "https://cabinet-diabate.com/#organization",
+        name: "Cabinet Manuela DIABATE",
+        url: "https://cabinet-diabate.com",
+        image: "https://cabinet-diabate.com/og-image.jpg",
+        logo: "https://cabinet-diabate.com/og-image.jpg",
         address: {
           "@type": "PostalAddress",
           streetAddress: "3 avenue des Ternes",
@@ -146,7 +147,7 @@ const Cabinet = () => {
           <div className="absolute inset-0">
             <ResponsiveImage
               data={cabinetImg}
-              alt="Cabinet ROGER VANGAH — bibliothèque de droit"
+              alt="Cabinet Manuela DIABATE — bibliothèque de droit"
               sizes="100vw"
               loading="eager"
               fetchPriority="high"
@@ -197,7 +198,7 @@ const Cabinet = () => {
                   />
                   <img
                     src={portraitSrc}
-                    alt="Maître ROGER VANGAH"
+                    alt="Maître Manuela DIABATE"
                     loading="lazy"
                     decoding="async"
                     width={1024}
@@ -299,6 +300,9 @@ const Cabinet = () => {
             </div>
           </div>
         </section>
+
+        {/* Présentation plus complète de l'avocate */}
+        <About />
 
         {/* CTA */}
         <section className="py-20 md:py-28 bg-background">

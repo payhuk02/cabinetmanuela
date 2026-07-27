@@ -17,8 +17,8 @@ type Field = {
 };
 
 const FIELDS: Field[] = [
-  { key: "card.cabinet", label: "Nom du cabinet (ligne dorée)", placeholder: "CABINET ROGER VANGAH" },
-  { key: "card.name", label: "Nom affiché", placeholder: "Maître Roger VANGAH" },
+  { key: "card.cabinet", label: "Nom du cabinet (ligne dorée)", placeholder: "CABINET Manuela DIABATE" },
+  { key: "card.name", label: "Nom affiché", placeholder: "Maître Manuela DIABATE" },
   { key: "card.subtitle", label: "Titre / Profession", placeholder: "Avocat au Barreau de Paris" },
   {
     key: "card.tagline",
@@ -28,12 +28,12 @@ const FIELDS: Field[] = [
   },
   { key: "card.phone", label: "Téléphone du cabinet", placeholder: "+33 1 76 58 67 37" },
   { key: "card.whatsapp", label: "Mobile / WhatsApp", placeholder: "+33 6 68 44 10 49" },
-  { key: "card.email", label: "Email", placeholder: "roger@vangah-avocats.com" },
+  { key: "card.email", label: "Email", placeholder: "contact@cabinet-diabate.com" },
   { key: "card.address", label: "Adresse", placeholder: "3 avenue des Ternes, 75017 Paris" },
   { key: "card.hours", label: "Horaires", placeholder: "Lundi – Vendredi : 9h00 – 19h00" },
-  { key: "card.website", label: "Site web", placeholder: "https://vangah-avocats.com" },
-  { key: "card.linkedin", label: "LinkedIn", placeholder: "https://www.linkedin.com/in/sylvestre-roger-vangah" },
-  { key: "card.appointment", label: "Lien de prise de rendez-vous", placeholder: "https://calendly.com/roger-vangah-avocats" },
+  { key: "card.website", label: "Site web", placeholder: "https://cabinet-diabate.com" },
+  { key: "card.linkedin", label: "LinkedIn", placeholder: "https://www.linkedin.com/in/manuela-diabate" },
+  { key: "card.appointment", label: "Lien de prise de rendez-vous", placeholder: "https://consultation.avocat.fr/avocat-paris/manuela-diabate-48544.html" },
 ];
 
 export const BusinessCardAdmin = () => {

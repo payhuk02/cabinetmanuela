@@ -1,6 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 
-const SITE_ORIGIN = "https://www.vangah-avocats.com";
+const SITE_ORIGIN = "https://www.cabinet-diabate.com";
 
 /** Fire-and-forget IndexNow ping after a publish. Silently ignores errors. */
 export const pingSeo = async (paths: string[]) => {

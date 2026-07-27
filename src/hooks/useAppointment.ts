@@ -2,8 +2,8 @@ import { useSite } from "@/hooks/SiteDataContext";
 import { useLang } from "@/i18n/LanguageContext";
 
 const DEFAULT_WHATSAPP = "+33 6 68 44 10 49";
-const DEFAULT_NAME_FR = "Cabinet ROGER Vangah — Avocat au Barreau de Paris";
-const DEFAULT_NAME_EN = "ROGER Vangah Law Firm — Attorney at the Paris Bar";
+const DEFAULT_NAME_FR = "Cabinet Manuela Diabate — Avocat au Barreau de Paris";
+const DEFAULT_NAME_EN = "Manuela Diabate Law Firm — Attorney at the Paris Bar";
 
 export type AppointmentTopic =
   | "appointment"

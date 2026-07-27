@@ -10,11 +10,11 @@ type Props = {
 };
 
 const ORIGIN =
-  typeof window !== "undefined" && window.location.hostname.endsWith("vangah-avocats.com")
-    ? "https://www.vangah-avocats.com"
+  typeof window !== "undefined" && window.location.hostname.endsWith("cabinet-diabate.com")
+    ? "https://www.cabinet-diabate.com"
     : typeof window !== "undefined"
     ? window.location.origin
-    : "https://www.vangah-avocats.com";
+    : "https://www.cabinet-diabate.com";
 
 const truncate = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s);
 
@@ -74,7 +74,7 @@ export const SeoPreview = ({ title, description, path = "/", image }: Props) => 
               V
             </div>
             <div className="leading-tight">
-              <div className="text-[#202124] text-[12px]">Cabinet ROGER VANGAH</div>
+              <div className="text-[#202124] text-[12px]">Cabinet Manuela DIABATE</div>
               <div className="text-[#5f6368] text-[12px]">{breadcrumb}</div>
             </div>
           </div>

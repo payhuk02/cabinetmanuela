@@ -29,11 +29,11 @@ const ExpertiseFAQ = () => {
   useSeo(
     expertise
       ? {
-          title: `FAQ ${expertise.title} — ROGER VANGAH`.slice(0, 60),
+          title: `FAQ ${expertise.title} — Manuela DIABATE`.slice(0, 60),
           description:
             lang === "fr"
-              ? `Questions fréquentes en ${expertise.title.toLowerCase()} : réponses claires et concrètes du Cabinet ROGER VANGAH, avocats à Paris.`.slice(0, 158)
-              : `Frequently asked questions on ${expertise.title}: clear, practical answers from Cabinet ROGER VANGAH, lawyers in Paris.`.slice(0, 158),
+              ? `Questions fréquentes en ${expertise.title.toLowerCase()} : réponses claires et concrètes du Cabinet Manuela DIABATE, avocats à Paris.`.slice(0, 158)
+              : `Frequently asked questions on ${expertise.title}: clear, practical answers from Cabinet Manuela DIABATE, lawyers in Paris.`.slice(0, 158),
           type: "article",
           lang,
           canonical,

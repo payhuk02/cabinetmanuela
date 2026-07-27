@@ -1,36 +1,37 @@
 import { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import {
+import { 
   Phone,
   Mail,
   Globe,
   MapPin,
-  Linkedin,
+  Linkedin, Instagram ,
   Download,
   QrCode,
   MessageCircle,
   Calendar,
   Clock,
 } from "lucide-react";
-import portrait480 from "@/assets/team/roger-vangah-480.webp";
-import portrait800 from "@/assets/team/roger-vangah-800.webp";
-import portrait1280 from "@/assets/team/roger-vangah-1280.webp";
-import logoGold from "@/assets/logo-roger-vangah-light-transparent.webp";
+import portrait480 from "@/assets/team/manuela-diabate-480.webp";
+import portrait800 from "@/assets/team/manuela-diabate-800.webp";
+import portrait1280 from "@/assets/team/manuela-diabate-1280.webp";
+import logoGold from "@/assets/logo-manuela-diabate-light-transparent.webp";
 
-/* Vraies données extraites de vangah-avocats.com (servent de fallback) */
+/* Vraies données extraites de cabinet-diabate.com (servent de fallback) */
 const DEFAULTS = {
-  cabinet: "CABINET ROGER VANGAH",
-  name: "Maître Roger VANGAH",
+  cabinet: "CABINET Manuela DIABATE",
+  name: "Maître Manuela DIABATE",
   subtitle: "Avocat au Barreau de Paris",
   tagline: "Conseil & Contentieux — Expertise France & Afrique",
-  email: "roger@vangah-avocats.com",
-  phone: "+33 1 76 58 67 37",
-  whatsapp: "+33 6 68 44 10 49",
-  address: "3 avenue des Ternes, 75017 Paris",
-  hours: "Lundi – Vendredi : 9h00 – 19h00",
-  website: "https://vangah-avocats.com",
-  linkedin: "https://www.linkedin.com/in/sylvestre-roger-vangah",
-  appointment: "https://calendly.com/roger-vangah-avocats",
+  email: "manuela.diabate@mdi-avocats.com",
+  phone: "06 59 76 42 51",
+  whatsapp: "06 59 76 42 51",
+  address: "47 Rue Rémy-DUMONCEL 75014 PARIS",
+  hours: "Lundi au vendredi de 9 heures- 20 heures",
+  website: "https://cabinet-diabate.com",
+  linkedin: "https://www.linkedin.com/in/manuela-diabate",
+  instagram: "https://instagram.com/manuela.diabate",
+  appointment: "https://consultation.avocat.fr/avocat-paris/manuela-diabate-48544.html",
 };
 
 type CardData = typeof DEFAULTS & { photo: string };
@@ -46,7 +47,7 @@ function buildVCard(d: CardData) {
     "BEGIN:VCARD",
     "VERSION:3.0",
     `FN:${d.name}`,
-    "N:VANGAH;Roger;;Maître;",
+    "N:DIABATE;Manuela;;Maître;",
     `ORG:${d.cabinet}`,
     `TITLE:${d.subtitle}`,
     tel ? `TEL;TYPE=WORK,VOICE:${tel}` : "",
@@ -113,6 +114,7 @@ export default function Carte() {
         hours: get("card.hours", (ci as any).hours_fr || DEFAULTS.hours),
         website: get("card.website", DEFAULTS.website),
         linkedin: get("card.linkedin", (ci as any).linkedin_url || (fm as any).linkedin_url || DEFAULTS.linkedin),
+        instagram: get("card.instagram", DEFAULTS.instagram),
         appointment: get("card.appointment", (ci as any).appointment_url || DEFAULTS.appointment),
         photo: (fm as any).photo_url || portrait800,
       });
@@ -287,7 +289,7 @@ export default function Carte() {
               href={data.linkedin}
               icon={<Linkedin className="h-4 w-4" />}
               label="LinkedIn"
-              value="Sylvestre Roger Vangah"
+              value="LinkedIn"
               external
             />
           )}

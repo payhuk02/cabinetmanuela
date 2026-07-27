@@ -527,7 +527,7 @@ export const NewsAdmin = () => {
                 seoTitle={n.seo_title}
                 seoDescription={n.seo_description}
                 ogImageUrl={n.og_image_url}
-                fallbackTitle={`${n.title} — Cabinet ROGER VANGAH`}
+                fallbackTitle={`${n.title} — Cabinet Manuela DIABATE`}
                 fallbackDescription={(n.excerpt || "").replace(/<[^>]+>/g, "").slice(0, 160)}
                 onChange={(patch) => {
                   setItems((p) => p.map((i) => (i.id === n.id ? { ...i, ...patch } : i)));

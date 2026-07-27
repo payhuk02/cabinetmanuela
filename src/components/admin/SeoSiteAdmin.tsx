@@ -136,14 +136,14 @@ export const SeoSiteAdmin = () => {
             <h3 className="font-serif text-lg text-primary">Plausible Analytics (optionnel)</h3>
             <p className="text-xs text-muted-foreground mt-1">
               Suivi d'audience anonyme et conforme RGPD, sans cookie. Indiquez le domaine déclaré dans
-              Plausible (ex. <code>vangah-avocats.com</code>). Laissez vide pour désactiver.
+              Plausible (ex. <code>cabinet-diabate.com</code>). Laissez vide pour désactiver.
             </p>
           </div>
         </div>
         <Input
           value={values["seo.site.plausible_domain"]}
           onChange={(e) => setValues({ ...values, "seo.site.plausible_domain": e.target.value })}
-          placeholder="vangah-avocats.com"
+          placeholder="cabinet-diabate.com"
         />
       </section>
 

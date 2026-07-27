@@ -34,6 +34,70 @@ const normalize = (raw: Record<string, unknown>): ExpertiseRow => ({
   faq: Array.isArray(raw.faq) ? (raw.faq as ExpertiseFAQ[]) : [],
 });
 
+const FALLBACK_EXPERTISES: ExpertiseRow[] = [
+  {
+    id: "ext-1",
+    slug: "droit-des-etrangers-asile",
+    title: "Droit des étrangers et de l'asile",
+    icon: "Globe2",
+    tagline: "Demande de visa, titre de séjour, regroupement familial, asile.",
+    intro: "Nous vous accompagnons dans toutes vos démarches relatives au droit des étrangers et de la nationalité.",
+    conclusion: "Notre cabinet vous garantit un suivi rigoureux pour faire valoir vos droits.",
+    image_url: null,
+    approach: "Une approche humaine et pragmatique pour débloquer votre situation administrative.",
+    sections: [
+      {
+        title: "Nos interventions",
+        items: [
+          "Demande de visa d'entrée sur le territoire",
+          "Demande de titre de séjour",
+          "Introduire une demande de regroupement familial",
+          "Demande d'asile et recours"
+        ]
+      }
+    ],
+    methodology: [],
+    faq: [],
+    sort_order: 1,
+    published: true
+  },
+  {
+    id: "fam-1",
+    slug: "droit-de-la-famille",
+    title: "Droit de la famille",
+    icon: "Users",
+    tagline: "Divorce, droits des enfants et devoirs des parents.",
+    intro: "Nous vous assistons dans les moments délicats touchant à votre cadre familial.",
+    conclusion: "Un accompagnement sur mesure pour protéger vos intérêts et ceux de vos enfants.",
+    image_url: null,
+    approach: "Écoute attentive, discrétion et fermeté dans la défense de vos droits.",
+    sections: [
+      {
+        title: "Divorce",
+        items: [
+          "Divorce par consentement mutuel",
+          "Divorce pour faute",
+          "Divorce pour altération définitive du lien conjugal",
+          "Divorce pour acceptation du principe de la rupture du mariage"
+        ]
+      },
+      {
+        title: "Droit des enfants",
+        items: [
+          "Résidence habituelle",
+          "Droits de visite et d'hébergement",
+          "Contribution à l'éducation et à l'entretien de l'enfant",
+          "Droits et devoirs des parents vis-à-vis de leur enfant mineur"
+        ]
+      }
+    ],
+    methodology: [],
+    faq: [],
+    sort_order: 2,
+    published: true
+  }
+];
+
 export const useExpertises = (opts: { onlyPublished?: boolean } = {}) => {
   const { onlyPublished = true } = opts;
   const [data, setData] = useState<ExpertiseRow[]>([]);
@@ -45,8 +109,12 @@ export const useExpertises = (opts: { onlyPublished?: boolean } = {}) => {
     let q = supabase.from("expertises").select("*").order("sort_order", { ascending: true });
     if (onlyPublished) q = q.eq("published", true);
     const { data: rows, error: err } = await q;
-    if (err) setError(err.message);
-    else setData((rows ?? []).map(normalize));
+    if (err) {
+      setError(err.message);
+      setData(FALLBACK_EXPERTISES);
+    } else {
+      setData(rows && rows.length > 0 ? rows.map(normalize) : FALLBACK_EXPERTISES);
+    }
     setLoading(false);
   };
 
@@ -77,7 +145,12 @@ export const useExpertise = (slug: string | undefined) => {
         .eq("published", true)
         .maybeSingle();
       if (!cancelled) {
-        setData(row ? normalize(row) : null);
+        if (row) {
+          setData(normalize(row));
+        } else {
+          const fallback = FALLBACK_EXPERTISES.find((e) => e.slug === slug);
+          setData(fallback || null);
+        }
         setLoading(false);
       }
     })();

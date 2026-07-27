@@ -15,21 +15,21 @@ export const translations = {
       eyebrow: "Cabinet d'avocats international",
       title: "L'excellence juridique,\nau service de vos ambitions.",
       subtitle:
-        "ROGER VANGAH accompagne entreprises et dirigeants dans leurs opérations stratégiques, en France et à l'international.",
+        "Manuela DIABATE accompagne entreprises et dirigeants dans leurs opérations stratégiques, en France et à l'international.",
       cta: "Prendre rendez-vous",
       ctaSecondary: "Découvrir le cabinet",
     },
     about: {
       eyebrow: "Cabinet",
       title: "Une tradition d'excellence,\nun regard contemporain.",
-      p1: "Fondé sur des valeurs d'exigence, de discrétion et d'engagement, ROGER VANGAH réunit des avocats reconnus pour leur expertise sectorielle et leur sens de la stratégie.",
+      p1: "Fondé sur des valeurs d'exigence, de discrétion et d'engagement, Manuela DIABATE réunit des avocats reconnus pour leur expertise sectorielle et leur sens de la stratégie.",
       p2: "Nous intervenons auprès de groupes internationaux, ETI, fonds d'investissement et dirigeants dans les opérations les plus complexes.",
       presentation: {
-        p1: "Avocat passionné et engagé, inscrit au Barreau de Paris, Maître ROGER VANGAH accompagne ses clients avec rigueur et détermination, tant en Conseil qu'en Contentieux.",
-        p2: "Fort d'un parcours professionnel enrichissant, Maître VANGAH a exercé au sein de cabinets d'avocats de renom en Côte d'Ivoire et en France, ainsi qu'au sein d'entreprises internationales. Ces expériences variées lui ont permis de développer une approche globale et pragmatique des problématiques juridiques, répondant aux exigences d'une clientèle diversifiée.",
-        p3: "Diplômé en droit en Côte d'Ivoire, Maître VANGAH possède une maîtrise approfondie du droit OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires). Cette compétence, alliée à sa pratique du droit français, lui confère une capacité unique à traiter des dossiers transnationaux complexes, en conciliant les systèmes juridiques africains et européens.",
-        p4: "Cette double compétence franco-africaine lui permet d'appréhender avec finesse des problématiques complexes à l'échelle internationale dans plusieurs domaines du droit, tels que le droit des affaires (sociétés, bancaires et financiers, conflits entre associés…), droit immobilier (baux, copropriétés, constructions), droit des étrangers (visas, titres de séjour, naturalisation, asile).",
-        p5: "Maître ROGER VANGAH s'engage à défendre vos intérêts avec passion, rigueur, et détermination, en vous offrant un accompagnement juridique sur mesure adapté à vos besoins spécifiques.",
+        p1: "Avocate passionnée et dévouée, Maître Manuela DIABATE a toujours placé la quête de la justice au cœur de sa vocation. Inscrite au Barreau, elle défend avec conviction et humanité les droits de ceux qu'elle accompagne.",
+        p2: "Son lien avec le droit s'est forgé sur une conviction intime : chaque individu mérite une défense juste, éclairée et combative. C'est cette volonté de rétablir l'équilibre et de protéger les plus vulnérables qui l'a guidée tout au long de son parcours.",
+        p3: "La création de son propre cabinet est l'aboutissement naturel de cet engagement. Elle a souhaité bâtir une structure à son image : accessible, rigoureuse et profondément humaine, où la relation de confiance avec le client prime sur toute autre considération.",
+        p4: "Forte d'une expertise reconnue, notamment en droit des étrangers, de la nationalité et en droit de la famille, elle aborde chaque dossier avec la même détermination : celle de faire triompher le droit et la justice.",
+        p5: "Le Cabinet Manuela DIABATE n'est pas seulement un lieu d'expertise juridique, c'est un espace de protection et d'accompagnement où votre voix sera entendue et vos intérêts défendus avec une inébranlable pugnacité.",
       },
       stats: [
         { value: "25+", label: "Années d'expérience" },
@@ -96,7 +96,7 @@ export const translations = {
       hours: "Lun – Ven · 9h – 19h",
     },
     footer: {
-       tagline: "Cabinet ROGER VANGAH",
+       tagline: "Cabinet Manuela DIABATE",
       rights: "Tous droits réservés.",
       legal: "Mentions légales",
       privacy: "Confidentialité",
@@ -116,21 +116,21 @@ export const translations = {
       eyebrow: "International law firm",
       title: "Legal excellence,\nfor your boldest ambitions.",
       subtitle:
-        "ROGER VANGAH advises companies and leaders on strategic operations, in France and around the world.",
+        "Manuela DIABATE advises companies and leaders on strategic operations, in France and around the world.",
       cta: "Book a meeting",
       ctaSecondary: "Discover the firm",
     },
     about: {
       eyebrow: "The Firm",
       title: "A tradition of excellence,\na contemporary vision.",
-      p1: "Built on demanding standards, discretion and commitment, ROGER VANGAH brings together lawyers recognized for their sector expertise and strategic insight.",
+      p1: "Built on demanding standards, discretion and commitment, Manuela DIABATE brings together lawyers recognized for their sector expertise and strategic insight.",
       p2: "We advise international groups, mid-cap companies, investment funds and executives on their most complex matters.",
       presentation: {
-        p1: "A passionate and committed lawyer, admitted to the Paris Bar, Maître ROGER VANGAH represents his clients with rigour and determination, in both advisory and litigation matters.",
+        p1: "A passionate and committed lawyer, admitted to the Paris Bar, Maître MANUELA VANGAH represents his clients with rigour and determination, in both advisory and litigation matters.",
         p2: "Drawing on a rich professional background, Maître VANGAH has practised in leading law firms in Côte d'Ivoire and France, as well as within international companies. These varied experiences have enabled him to develop a comprehensive and pragmatic approach to legal issues, meeting the requirements of a diverse clientele.",
         p3: "A law graduate from Côte d'Ivoire, Maître VANGAH has an in-depth command of OHADA law (Organisation for the Harmonisation of Business Law in Africa). Combined with his practice of French law, this expertise gives him a unique ability to handle complex cross-border matters, bridging African and European legal systems.",
         p4: "This dual Franco-African expertise allows him to address complex international issues with precision across several areas of law, including business law (companies, banking and finance, shareholder disputes…), real-estate law (leases, co-ownership, construction), and immigration law (visas, residence permits, naturalisation, asylum).",
-        p5: "Maître ROGER VANGAH is committed to defending your interests with passion, rigour and determination, offering you tailored legal support adapted to your specific needs.",
+        p5: "Maître MANUELA VANGAH is committed to defending your interests with passion, rigour and determination, offering you tailored legal support adapted to your specific needs.",
       },
       stats: [
         { value: "25+", label: "Years of experience" },
@@ -197,7 +197,7 @@ export const translations = {
       hours: "Mon – Fri · 9am – 7pm",
     },
     footer: {
-       tagline: "Cabinet ROGER VANGAH",
+       tagline: "Cabinet Manuela DIABATE",
       rights: "All rights reserved.",
       legal: "Legal notice",
       privacy: "Privacy",

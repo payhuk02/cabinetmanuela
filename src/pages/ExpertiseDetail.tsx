@@ -36,9 +36,9 @@ const ExpertiseDetail = () => {
 
   const expRow = expertise as (typeof expertise & { seo_title?: string | null; seo_description?: string | null; og_image_url?: string | null }) | null;
   const fallbackTitle = expertise
-    ? `${expertise.title} — Avocat | Cabinet ROGER VANGAH`.slice(0, 60)
+    ? `${expertise.title} — Avocat | Cabinet Manuela DIABATE`.slice(0, 60)
     : "";
-  const FIRM_SUFFIX = " — Cabinet ROGER VANGAH, avocats à Paris et en Afrique.";
+  const FIRM_SUFFIX = " — Cabinet Manuela DIABATE, avocats à Paris et en Afrique.";
   const fallbackDescRaw = expertise
     ? (expertise.tagline && expertise.tagline.length > 50
         ? expertise.tagline
@@ -74,7 +74,7 @@ const ExpertiseDetail = () => {
               {
                 "@type": "LegalService",
                 "@id": `${origin}/expertises/${expertise.slug}#service`,
-                name: `${expertise.title} — Cabinet ROGER VANGAH`,
+                name: `${expertise.title} — Cabinet Manuela DIABATE`,
                 description: metaDesc,
                 serviceType: expertise.title,
                 areaServed: ["FR", "CI"],
@@ -82,7 +82,7 @@ const ExpertiseDetail = () => {
                 image: heroImage || undefined,
                 provider: {
                   "@type": "Attorney",
-                  name: "Cabinet ROGER VANGAH",
+                  name: "Cabinet Manuela DIABATE",
                   url: origin,
                 },
               },

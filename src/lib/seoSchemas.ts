@@ -8,7 +8,7 @@ export const breadcrumbJsonLd = (
 ) => {
   const base =
     origin ??
-    (typeof window !== "undefined" ? window.location.origin : "https://www.vangah-avocats.com");
+    (typeof window !== "undefined" ? window.location.origin : "https://www.cabinet-diabate.com");
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { logAudit } from "@/lib/audit";
 import { Upload, Trash2 } from "lucide-react";
-import logoDarkDefault from "@/assets/logo-roger-vangah.webp";
-import logoLightDefault from "@/assets/logo-roger-vangah-light.webp";
+import logoDarkDefault from "@/assets/logo-manuela-diabate.webp";
+import logoLightDefault from "@/assets/logo-manuela-diabate-light.webp";
 // Use the WebP variant (~180 KB) instead of the original 1.7 MB JPG —
 // this asset is only a fallback shown in the admin upload preview.
 import heroDefault from "@/assets/hero-law.webp";
