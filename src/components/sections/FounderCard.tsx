@@ -5,7 +5,7 @@ import { Play } from "lucide-react";
 import founderImage from "@/assets/hero-cabinet-diabate.jpg?responsive";
 
 import { useText } from "@/hooks/useText";
-import { useLogos } from "@/hooks/useLogos";
+import { useLogo } from "@/hooks/useLogos";
 
 export const FounderCard = () => {
   const { lang } = useLang();
@@ -17,7 +17,7 @@ export const FounderCard = () => {
   const role = useText("home.founderQuote.role", "Avocate au Barreau de Paris");
   
   // Custom image from LogosAdmin, or fallback
-  const customImage = useLogos("founder_quote_image");
+  const customImage = useLogo("founder_quote_image");
   const finalImage = customImage || ((founderImage as any)?.src || founderImage);
 
   if (!showSection) return null;
