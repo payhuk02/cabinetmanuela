@@ -273,28 +273,28 @@ const Cabinet = () => {
                   key={title}
                   className="group relative p-[1px] rounded-3xl bg-gradient-to-b from-accent/40 via-accent/10 to-transparent transition-all duration-500 hover:from-accent hover:via-accent/40 hover:-translate-y-1"
                 >
-                  <div className="relative h-full rounded-[calc(1.5rem-1px)] overflow-hidden bg-gradient-to-b from-[hsl(var(--primary)/0.85)] to-[hsl(var(--primary)/0.6)] backdrop-blur-sm p-8 flex flex-col items-center text-center transition-colors duration-500 group-hover:from-[hsl(var(--primary)/0.95)]">
+                  <div className="relative h-full rounded-[calc(1.5rem-1px)] overflow-hidden bg-white shadow-md p-8 flex flex-col items-center text-center transition-shadow duration-500 group-hover:shadow-lg">
                     <div
                       aria-hidden
                       className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                       style={{
                         background:
-                          "radial-gradient(circle at 50% 0%, hsl(var(--accent) / 0.18), transparent 60%)",
+                          "radial-gradient(circle at 50% 0%, hsl(var(--accent) / 0.1), transparent 60%)",
                       }}
                     />
 
-                    <h3 className="relative font-serif font-bold text-xl text-primary-foreground tracking-tight">
+                    <h3 className="relative font-serif font-bold text-xl text-primary tracking-tight">
                       {title}
                     </h3>
 
                     <div className="relative mt-5 h-14 w-14 flex items-center justify-center rounded-full bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/40 shadow-[0_0_24px_-8px_hsl(var(--accent)/0.6)] group-hover:from-accent group-hover:to-accent/80 group-hover:border-accent transition-all duration-500">
                       <Icon
-                        className="h-6 w-6 text-accent group-hover:text-accent-foreground transition-colors"
+                        className="h-6 w-6 text-accent group-hover:text-primary-foreground transition-colors"
                         strokeWidth={1.5}
                       />
                     </div>
 
-                    <p className="relative mt-5 text-sm text-primary-foreground/75 leading-relaxed">
+                    <p className="relative mt-5 text-sm text-primary/80 font-medium leading-relaxed">
                       {desc}
                     </p>
                   </div>
