@@ -45,6 +45,26 @@ const GROUPS: GroupDef[] = [
     ],
   },
   {
+    label: "Frise Chronologique (Timeline)",
+    keys: [
+      { key: "cabinet.timeline.show", label: "Afficher cette section (oui/non)", defaultValue: "oui" },
+      { key: "cabinet.timeline.eyebrow", label: "Eyebrow", defaultValue: "Frise Chronologique" },
+      { key: "cabinet.timeline.mainTitle", label: "Titre principal", defaultValue: "Notre Parcours" },
+      { key: "cabinet.timeline.1.year", label: "Étape 1 — Année", defaultValue: "2018" },
+      { key: "cabinet.timeline.1.title", label: "Étape 1 — Titre", defaultValue: "Création du Cabinet" },
+      { key: "cabinet.timeline.1.desc", label: "Étape 1 — Description", multiline: true, defaultValue: "Fondation du cabinet avec une vision claire : apporter une expertise juridique pointue en droit des affaires et droit pénal." },
+      { key: "cabinet.timeline.2.year", label: "Étape 2 — Année", defaultValue: "2020" },
+      { key: "cabinet.timeline.2.title", label: "Étape 2 — Titre", defaultValue: "Développement International" },
+      { key: "cabinet.timeline.2.desc", label: "Étape 2 — Description", multiline: true, defaultValue: "Renforcement de notre réseau de partenaires, marquant le début de l'expertise approfondie en droit OHADA." },
+      { key: "cabinet.timeline.3.year", label: "Étape 3 — Année", defaultValue: "2022" },
+      { key: "cabinet.timeline.3.title", label: "Étape 3 — Titre", defaultValue: "Élargissement des Compétences" },
+      { key: "cabinet.timeline.3.desc", label: "Étape 3 — Description", multiline: true, defaultValue: "Intégration du droit de l'immobilier et du droit des étrangers pour offrir un accompagnement global à nos clients." },
+      { key: "cabinet.timeline.4.year", label: "Étape 4 — Année", defaultValue: "2024" },
+      { key: "cabinet.timeline.4.title", label: "Étape 4 — Titre", defaultValue: "Accélération" },
+      { key: "cabinet.timeline.4.desc", label: "Étape 4 — Description", multiline: true, defaultValue: "Une équipe qui s'agrandit pour mieux répondre aux enjeux juridiques complexes de notre époque." },
+    ],
+  },
+  {
     label: "CTA bas de page",
     keys: [
       { key: "cabinet.cta.title", label: "Titre", multiline: true, defaultValue: "Discutons de votre situation." },

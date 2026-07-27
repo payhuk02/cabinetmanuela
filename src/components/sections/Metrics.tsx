@@ -18,15 +18,38 @@ const Counter = ({ from = 0, to, duration = 2 }: { from?: number, to: number, du
   return <motion.span ref={ref}>{display}</motion.span>;
 };
 
+import { useText } from "@/hooks/useText";
+
 export const Metrics = () => {
   const { lang } = useLang();
   
+  const showMetrics = useText("home.metrics.show", "oui") === "oui";
+
+  // Use dynamic strings for each metric. The `parseInt` safely handles any string value.
   const metrics = [
-    { value: 15, suffix: "+", label: lang === "fr" ? "Années d'expérience" : "Years of Experience" },
-    { value: 800, suffix: "+", label: lang === "fr" ? "Dossiers Plaidés" : "Cases Argued" },
-    { value: 95, suffix: "%", label: lang === "fr" ? "Clients Satisfaits" : "Satisfied Clients" },
-    { value: 3, suffix: "", label: lang === "fr" ? "Langues Parlées" : "Spoken Languages" },
+    { 
+      value: parseInt(useText("home.metrics.1.value", "15")) || 0, 
+      suffix: useText("home.metrics.1.suffix", "+"), 
+      label: useText("home.metrics.1.label", "Années d'expérience") 
+    },
+    { 
+      value: parseInt(useText("home.metrics.2.value", "800")) || 0, 
+      suffix: useText("home.metrics.2.suffix", "+"), 
+      label: useText("home.metrics.2.label", "Dossiers Plaidés") 
+    },
+    { 
+      value: parseInt(useText("home.metrics.3.value", "95")) || 0, 
+      suffix: useText("home.metrics.3.suffix", "%"), 
+      label: useText("home.metrics.3.label", "Clients Satisfaits") 
+    },
+    { 
+      value: parseInt(useText("home.metrics.4.value", "3")) || 0, 
+      suffix: useText("home.metrics.4.suffix", ""), 
+      label: useText("home.metrics.4.label", "Langues Parlées") 
+    },
   ];
+
+  if (!showMetrics) return null;
 
   return (
     <section className="py-24 bg-night text-primary-foreground relative overflow-hidden">

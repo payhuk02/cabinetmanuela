@@ -2,33 +2,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLang } from "@/i18n/LanguageContext";
 
-const timelineData = [
-  {
-    year: "2018",
-    title: "Création du Cabinet",
-    description: "Fondation du cabinet avec une vision claire : apporter une expertise juridique pointue en droit des affaires et droit pénal."
-  },
-  {
-    year: "2020",
-    title: "Développement International",
-    description: "Renforcement de notre réseau de partenaires, marquant le début de l'expertise approfondie en droit OHADA."
-  },
-  {
-    year: "2022",
-    title: "Élargissement des Compétences",
-    description: "Intégration du droit de l'immobilier et du droit des étrangers pour offrir un accompagnement global à nos clients."
-  },
-  {
-    year: "2024",
-    title: "Accélération",
-    description: "Une équipe qui s'agrandit pour mieux répondre aux enjeux juridiques complexes de notre époque."
-  }
-];
+import { useText } from "@/hooks/useText";
 
 export const Timeline = () => {
   const { lang } = useLang();
   const containerRef = useRef<HTMLDivElement>(null);
   
+  const showSection = useText("cabinet.timeline.show", "oui") === "oui";
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start center", "end center"]
@@ -36,15 +17,41 @@ export const Timeline = () => {
 
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
+  // Collect the 4 dynamic items
+  const timelineData = [
+    {
+      year: useText("cabinet.timeline.1.year", "2018"),
+      title: useText("cabinet.timeline.1.title", "Création du Cabinet"),
+      description: useText("cabinet.timeline.1.desc", "Fondation du cabinet avec une vision claire : apporter une expertise juridique pointue en droit des affaires et droit pénal.")
+    },
+    {
+      year: useText("cabinet.timeline.2.year", "2020"),
+      title: useText("cabinet.timeline.2.title", "Développement International"),
+      description: useText("cabinet.timeline.2.desc", "Renforcement de notre réseau de partenaires, marquant le début de l'expertise approfondie en droit OHADA.")
+    },
+    {
+      year: useText("cabinet.timeline.3.year", "2022"),
+      title: useText("cabinet.timeline.3.title", "Élargissement des Compétences"),
+      description: useText("cabinet.timeline.3.desc", "Intégration du droit de l'immobilier et du droit des étrangers pour offrir un accompagnement global à nos clients.")
+    },
+    {
+      year: useText("cabinet.timeline.4.year", "2024"),
+      title: useText("cabinet.timeline.4.title", "Accélération"),
+      description: useText("cabinet.timeline.4.desc", "Une équipe qui s'agrandit pour mieux répondre aux enjeux juridiques complexes de notre époque.")
+    }
+  ];
+
+  if (!showSection) return null;
+
   return (
     <section className="py-24 md:py-32 bg-background relative" ref={containerRef}>
       <div className="container-luxe max-w-4xl mx-auto">
         <div className="text-center mb-16 md:mb-24">
           <p className="eyebrow text-accent justify-center">
-            {lang === "fr" ? "Frise Chronologique" : "Timeline"}
+            {useText("cabinet.timeline.eyebrow", lang === "fr" ? "Frise Chronologique" : "Timeline")}
           </p>
           <h2 className="mt-4 font-serif text-3xl md:text-5xl text-primary">
-            {lang === "fr" ? "Notre Parcours" : "Our Journey"}
+            {useText("cabinet.timeline.mainTitle", lang === "fr" ? "Notre Parcours" : "Our Journey")}
           </h2>
         </div>
 

@@ -49,6 +49,13 @@ const LOGOS: LogoEntry[] = [
     bg: "bg-background",
   },
   {
+    key: "founder_quote_image",
+    label: "Image « Le Mot de l'Avocate » (Accueil)",
+    description: "Photo affichée pour la section « Le Mot de l'Avocate » sur l'accueil. Format portrait 4/5 recommandé. Si vide, l'image par défaut est utilisée.",
+    fallback: "",
+    bg: "bg-night",
+  },
+  {
     key: "cabinet.portrait",
     label: "Portrait — Page « Cabinet »",
     description: "Photo affichée à gauche de la présentation sur la page /cabinet. Format portrait 4/5 recommandé. Si vide, aucune image n'est affichée.",

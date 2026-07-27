@@ -249,6 +249,34 @@ const GROUPS: GroupDef[] = [
       { key: "contact.ackClose", label: "Bouton « Fermer »", defaultValue: "Fermer" },
     ],
   },
+  {
+    label: "Chiffres Clés (Statistiques)",
+    keys: [
+      { key: "home.metrics.show", label: "Afficher cette section (oui/non)", defaultValue: "oui" },
+      { key: "home.metrics.1.value", label: "Chiffre 1", defaultValue: "15" },
+      { key: "home.metrics.1.suffix", label: "Suffixe 1 (ex: + ou %)", defaultValue: "+" },
+      { key: "home.metrics.1.label", label: "Libellé 1", defaultValue: "Années d'expérience" },
+      { key: "home.metrics.2.value", label: "Chiffre 2", defaultValue: "800" },
+      { key: "home.metrics.2.suffix", label: "Suffixe 2", defaultValue: "+" },
+      { key: "home.metrics.2.label", label: "Libellé 2", defaultValue: "Dossiers Plaidés" },
+      { key: "home.metrics.3.value", label: "Chiffre 3", defaultValue: "95" },
+      { key: "home.metrics.3.suffix", label: "Suffixe 3", defaultValue: "%" },
+      { key: "home.metrics.3.label", label: "Libellé 3", defaultValue: "Clients Satisfaits" },
+      { key: "home.metrics.4.value", label: "Chiffre 4", defaultValue: "3" },
+      { key: "home.metrics.4.suffix", label: "Suffixe 4", defaultValue: "" },
+      { key: "home.metrics.4.label", label: "Libellé 4", defaultValue: "Langues Parlées" },
+    ],
+  },
+  {
+    label: "Le Mot de l'Avocate",
+    keys: [
+      { key: "home.founderQuote.show", label: "Afficher cette section (oui/non)", defaultValue: "oui" },
+      { key: "home.founderQuote.eyebrow", label: "Eyebrow", defaultValue: "Le mot de l'avocate" },
+      { key: "home.founderQuote.quote", label: "Citation", multiline: true, defaultValue: "\"La justice n'est pas une simple procédure, c'est un droit fondamental. Notre mission est de vous accompagner avec humanité et détermination pour le faire valoir.\"" },
+      { key: "home.founderQuote.name", label: "Nom de l'avocate", defaultValue: "Maître Manuela DIABATE" },
+      { key: "home.founderQuote.role", label: "Titre / Barreau", defaultValue: "Avocate au Barreau de Paris" },
+    ],
+  },
 ];
 
 export const HomeAdmin = () => (
