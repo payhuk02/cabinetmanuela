@@ -250,6 +250,30 @@ const GROUPS: GroupDef[] = [
     ],
   },
   {
+    label: "Section Contact — Tarification (Honoraires)",
+    keys: [
+      { key: "contact.pricing.eyebrow", label: "Surtitre", defaultValue: "Honoraires" },
+      { key: "contact.pricing.title", label: "Titre", defaultValue: "Tarifs des consultations" },
+      
+      { key: "contact.pricing.1.title", label: "Option 1 : Titre", defaultValue: "Rendez-vous cabinet" },
+      { key: "contact.pricing.1.desc", label: "Option 1 : Description", defaultValue: "Durée : 60 min" },
+      { key: "contact.pricing.1.price", label: "Option 1 : Prix", defaultValue: "180 €" },
+      { key: "contact.pricing.1.btn", label: "Option 1 : Bouton", defaultValue: "Prendre RDV" },
+      
+      { key: "contact.pricing.2.title", label: "Option 2 : Titre", defaultValue: "Consultation vidéo" },
+      { key: "contact.pricing.2.desc", label: "Option 2 : Description", defaultValue: "Durée : 60 min" },
+      { key: "contact.pricing.2.price", label: "Option 2 : Prix", defaultValue: "180 €" },
+      { key: "contact.pricing.2.btn", label: "Option 2 : Bouton", defaultValue: "Prendre RDV" },
+      
+      { key: "contact.pricing.3.title", label: "Option 3 : Titre", defaultValue: "Consultation écrite" },
+      { key: "contact.pricing.3.desc", label: "Option 3 : Description", defaultValue: "Etude de votre dossier + possibilité d'ajout d'une pièce jointe" },
+      { key: "contact.pricing.3.price", label: "Option 3 : Prix", defaultValue: "350 €" },
+      { key: "contact.pricing.3.btn", label: "Option 3 : Bouton", defaultValue: "Consulter par écrit" },
+      
+      { key: "contact.pricing.note", label: "Note de bas de section", multiline: true, defaultValue: "Les consultations approfondies, dossiers complexes et missions sur mesure font l'objet d'un devis personnalisé." },
+    ],
+  },
+  {
     label: "Chiffres Clés (Statistiques)",
     keys: [
       { key: "home.metrics.show", label: "Afficher cette section (oui/non)", defaultValue: "oui" },

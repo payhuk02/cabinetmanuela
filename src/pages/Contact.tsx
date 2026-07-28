@@ -31,6 +31,9 @@ import {
   Clock,
   Building2,
   PhoneCall,
+  Video,
+  MessageSquareText,
+  ChevronRight,
 } from "lucide-react";
 /* eslint-disable import/no-unresolved */
 import heroContactPic from "@/assets/hero-contact.jpg?responsive";
@@ -558,39 +561,43 @@ const Contact = () => {
 
         <div className="relative container-luxe max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
-            <p className="eyebrow text-accent">{T.pricingEyebrow}</p>
+            <p className="eyebrow text-accent">{useText("contact.pricing.eyebrow", T.pricingEyebrow)}</p>
             <h2 className="mt-6 font-serif text-3xl md:text-5xl text-primary-foreground leading-[1.1]">
-              {T.pricingTitle}
+              {useText("contact.pricing.title", T.pricingTitle)}
             </h2>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-2 gap-6 md:gap-8">
-            <PricingCard
-              icon={<Building2 className="h-6 w-6" strokeWidth={1.5} />}
-              badge={T.cabBadge}
-              title={T.cabTitle}
-              desc={T.cabDesc}
-              price="150 €"
-              suffix={T.ttc}
-              cta={T.book}
+          <div className="mt-14 flex flex-col gap-4 max-w-4xl mx-auto">
+            <HorizontalPricingCard
+              icon={<Building2 className="h-7 w-7 text-accent" strokeWidth={1.5} />}
+              title={useText("contact.pricing.1.title", "Rendez-vous cabinet")}
+              desc={useText("contact.pricing.1.desc", "Durée : 60 min")}
+              price={useText("contact.pricing.1.price", "180 €")}
+              cta={useText("contact.pricing.1.btn", "Prendre RDV")}
               useAppointmentSelector
             />
-            <PricingCard
-              icon={<PhoneCall className="h-6 w-6" strokeWidth={1.5} />}
-              badge={T.phoneBadge}
-              title={T.phoneTitle}
-              desc={T.phoneDesc}
-              price="90 €"
-              suffix={T.ttc}
-              duration={lang === "fr" ? "30 minutes" : "30 minutes"}
-              cta={T.book}
-              href={`tel:${phone.replace(/\s/g, "")}`}
+            
+            <HorizontalPricingCard
+              icon={<Video className="h-7 w-7 text-accent" strokeWidth={1.5} />}
+              title={useText("contact.pricing.2.title", "Consultation vidéo")}
+              desc={useText("contact.pricing.2.desc", "Durée : 60 min")}
+              price={useText("contact.pricing.2.price", "180 €")}
+              cta={useText("contact.pricing.2.btn", "Prendre RDV")}
+              useAppointmentSelector
             />
-
+            
+            <HorizontalPricingCard
+              icon={<MessageSquareText className="h-7 w-7 text-accent" strokeWidth={1.5} />}
+              title={useText("contact.pricing.3.title", "Consultation écrite")}
+              desc={useText("contact.pricing.3.desc", "Etude de votre dossier + possibilité d'ajout d'une pièce jointe")}
+              price={useText("contact.pricing.3.price", "350 €")}
+              cta={useText("contact.pricing.3.btn", "Consulter par écrit")}
+              href={`mailto:${email}`}
+            />
           </div>
 
           <p className="mt-10 text-center text-xs text-primary-foreground/60 max-w-2xl mx-auto">
-            {T.pricingNote}
+            {useText("contact.pricing.note", T.pricingNote)}
           </p>
         </div>
       </section>
@@ -637,70 +644,63 @@ const InfoRow = ({
   </div>
 );
 
-const PricingCard = ({
+const HorizontalPricingCard = ({
   icon,
-  badge,
   title,
   desc,
   price,
-  suffix,
-  duration,
   cta,
   href,
   useAppointmentSelector = false,
 }: {
   icon: React.ReactNode;
-  badge: string;
   title: string;
   desc: string;
   price: string;
-  suffix: string;
-  duration?: string;
   cta: string;
   href?: string;
   useAppointmentSelector?: boolean;
 }) => (
-  <div className="group relative bg-card border border-border rounded-3xl p-8 md:p-10 shadow-soft hover:shadow-lg transition-all">
-    <div className="relative flex justify-center mb-6">
-      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent">
+  <div className="flex flex-col md:flex-row items-center justify-between bg-card/10 backdrop-blur-sm border border-border/20 rounded-xl p-4 md:p-6 shadow-sm hover:bg-card/20 hover:border-accent/30 transition-all duration-300">
+    <div className="flex items-center gap-6 w-full md:w-auto">
+      <div className="shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-background border border-accent/20 shadow-inner">
         {icon}
       </div>
-      <span className="absolute right-0 top-0 text-[10px] uppercase tracking-[0.25em] text-muted-foreground border border-border px-3 py-1">
-        {badge}
-      </span>
+      <div className="flex flex-col">
+        <h3 className="font-serif text-xl md:text-2xl text-primary-foreground">{title}</h3>
+        <p className="mt-1 text-sm text-primary-foreground/70">{desc}</p>
+      </div>
     </div>
-    <h3 className="font-serif text-2xl text-primary">{title}</h3>
-    {duration && (
-      <p className="mt-1 text-xs uppercase tracking-[0.2em] text-accent">
-        {duration}
-      </p>
-    )}
-    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{desc}</p>
-    <div className="mt-8 flex items-baseline gap-2">
-      <span className="font-serif text-4xl md:text-5xl text-primary">
-        {price}
-      </span>
-      <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-        {suffix}
-      </span>
-    </div>
-    <div className="mt-8">
+    
+    <div className="flex items-center gap-6 mt-6 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+      <div className="flex items-baseline gap-2 min-w-[120px] justify-end">
+        <span className="font-serif text-3xl md:text-4xl text-primary-foreground">{price}</span>
+        <span className="text-xs uppercase tracking-[0.2em] text-primary-foreground/50">TTC</span>
+      </div>
+      
       {useAppointmentSelector ? (
         <AppointmentButton
-          variant="appointment"
-          size="default"
-          className="w-full md:w-auto"
+          variant="gold"
+          size="lg"
+          className="w-full md:w-48 whitespace-nowrap group"
           showIcon={false}
-          label={cta}
+          label={
+            <span className="flex items-center justify-center gap-2">
+              {cta}
+              <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          }
         />
       ) : (
-        <Button asChild variant="contact" className="w-full md:w-auto h-12">
+        <Button asChild variant="gold" size="lg" className="w-full md:w-48 group">
           <a
             href={href}
             target={href?.startsWith("http") ? "_blank" : undefined}
-            rel="noopener noreferrer"
+            rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
+            className="flex items-center justify-center gap-2"
           >
             {cta}
+            <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
         </Button>
       )}
