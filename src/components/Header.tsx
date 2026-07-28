@@ -67,12 +67,12 @@ export const Header = () => {
           )}
         </a>
 
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-7 ml-auto">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-7 ml-auto bg-appointment text-appointment-foreground px-6 py-2 xl:px-8 xl:py-2.5 rounded-full shadow-soft font-bold">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className={`link-underline text-[13px] xl:text-sm font-semibold tracking-wide hover:text-accent transition-colors whitespace-nowrap ${scrolled ? 'text-foreground' : 'text-primary-foreground dark:text-foreground'}`}
+              className="link-underline text-[13px] xl:text-sm tracking-wide hover:text-white/80 transition-colors whitespace-nowrap text-appointment-foreground"
             >
               {l.label}
             </a>
