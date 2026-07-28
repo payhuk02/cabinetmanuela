@@ -114,7 +114,7 @@ export default function Carte() {
         linkedin: get("card.linkedin", (ci as any).linkedin_url || (fm as any).linkedin_url || DEFAULTS.linkedin),
         instagram: get("card.instagram", DEFAULTS.instagram),
         appointment: get("card.appointment", (ci as any).appointment_url || DEFAULTS.appointment),
-        photo: (fm as any).photo_url || "",
+        photo: get("card.photo", (fm as any).photo_url || ""),
       });
     })();
     return () => {

@@ -56,6 +56,13 @@ const LOGOS: LogoEntry[] = [
     bg: "bg-night",
   },
   {
+    key: "card.photo",
+    label: "Photo pour la « Carte de visite » (/carte)",
+    description: "Photo affichée sur la page Carte de Visite. Si vide, la photo du profil Fondateur est utilisée.",
+    fallback: "",
+    bg: "bg-background",
+  },
+  {
     key: "cabinet.portrait",
     label: "Portrait — Page « Cabinet »",
     description: "Photo affichée à gauche de la présentation sur la page /cabinet. Format portrait 4/5 recommandé. Si vide, aucune image n'est affichée.",
