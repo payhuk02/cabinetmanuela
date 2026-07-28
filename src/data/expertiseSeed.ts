@@ -37,17 +37,7 @@ export const EXPERTISE_SEED: ExpertiseSeed[] = [
       "Une expertise pointue des opérations de financement et des contentieux bancaires.",
     conclusion: "",
   },
-  {
-    slug: "surendettement-et-procedure-collective",
-    title: "Surendettement et procédure collective",
-    icon: "AlertTriangle",
-    tagline: "Restructuration, sauvegarde, redressement et liquidation.",
-    intro:
-      "Accompagnement des entreprises en difficulté et des particuliers surendettés à travers les procédures amiables et judiciaires.",
-    approach:
-      "Une intervention rapide pour préserver les intérêts du débiteur et négocier avec les créanciers.",
-    conclusion: "",
-  },
+
   {
     slug: "droit-ohada",
     title: "Droit OHADA",
