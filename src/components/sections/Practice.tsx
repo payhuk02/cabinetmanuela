@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AppointmentButton } from "@/components/AppointmentButton";
 import { useExpertises } from "@/hooks/useExpertises";
 import { getExpertiseIcon } from "@/data/expertiseIcons";
+import { EXPERTISE_IMAGES } from "@/data/expertiseImages";
 import { useText } from "@/hooks/useText";
 import { useLang } from "@/i18n/LanguageContext";
 
@@ -64,21 +65,32 @@ export const Practice = () => {
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {expertises.map((e) => {
               const Icon = getExpertiseIcon(e.icon);
+              const img = e.image_url || EXPERTISE_IMAGES[e.slug];
               return (
                 <Link
                   key={e.id}
                   to={`/expertises/${e.slug}`}
-                  className="group relative overflow-hidden rounded-[2rem] p-10 flex flex-col items-center text-center bg-gradient-to-br from-[hsl(222_47%_15%)] to-[hsl(222_50%_10%)] border border-primary-foreground/10 shadow-[0_20px_60px_-20px_hsl(0_0%_0%/0.6)] transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_30px_80px_-20px_hsl(var(--accent)/0.25)]"
+                  className="group relative overflow-hidden rounded-[2rem] p-10 flex flex-col items-center text-center bg-night border border-primary-foreground/10 shadow-[0_20px_60px_-20px_hsl(0_0%_0%/0.6)] transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_30px_80px_-20px_hsl(var(--accent)/0.25)]"
                 >
+                  {img && (
+                    <img
+                      src={img}
+                      alt=""
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 [filter:brightness(0.6)_contrast(1.1)]"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_47%_15%)/0.85] to-[hsl(222_50%_10%)/0.95] mix-blend-multiply" />
+                  
                   {/* hover glow */}
                   <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--accent)/0.18)_0%,transparent_60%)]" />
                   <ArrowUpRight className="absolute right-5 top-5 h-5 w-5 text-primary-foreground/30 group-hover:text-accent transition-colors" />
 
-                  <div className="relative flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 shadow-[inset_0_1px_0_hsl(var(--accent)/0.3)]">
+                  <div className="relative flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 shadow-[inset_0_1px_0_hsl(var(--accent)/0.3)] backdrop-blur-sm">
                     <Icon className="h-9 w-9 text-accent transition-transform duration-500 group-hover:scale-110" strokeWidth={1.25} />
                   </div>
-                  <h3 className="relative mt-8 font-serif text-2xl">{e.title}</h3>
-                  <p className="relative mt-4 text-sm text-primary-foreground/70 leading-relaxed">{e.tagline}</p>
+                  <h3 className="relative mt-8 font-serif text-2xl text-primary-foreground">{e.title}</h3>
+                  <p className="relative mt-4 text-sm text-primary-foreground/80 leading-relaxed">{e.tagline}</p>
                 </Link>
               );
             })}

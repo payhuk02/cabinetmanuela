@@ -166,7 +166,7 @@ const Expertises = () => {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {expertises.map((e, idx) => {
                     const Icon = getExpertiseIcon(e.icon);
-                    const img = e.image_url;
+                    const img = e.image_url || EXPERTISE_IMAGES[e.slug];
                     return (
                       <Link
                         key={e.id}
