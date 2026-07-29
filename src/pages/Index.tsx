@@ -66,8 +66,10 @@ const Index = () => {
       name: jsonLdName,
       legalName: "Cabinet Manuela DIABATE",
       description: jsonLdDesc,
-      image: "https://cabinet-diabate.com/og-image.jpg",
-      logo: "https://cabinet-diabate.com/og-image.jpg",
+      ...(seoImage ? {
+        image: seoImage,
+        logo: seoImage
+      } : {}),
       address: {
         "@type": "PostalAddress",
         streetAddress: street,

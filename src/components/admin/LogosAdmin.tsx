@@ -31,7 +31,7 @@ const LOGOS: LogoEntry[] = [
     key: "seo.home.image",
     label: "Image de partage (Réseaux Sociaux / Lien web)",
     description: "Le logo ou l'image qui s'affiche lorsque vous partagez le lien du site (WhatsApp, LinkedIn, etc.). Format paysage 1200x630 recommandé.",
-    fallback: "https://storage.googleapis.com/gpt-engineer-file-uploads/oU80EgxuIPOY0cKljJPA4JDp7Mi2/social-images/social-1778292531953-logo2.webp",
+    fallback: "",
     bg: "bg-background",
   },
   {
