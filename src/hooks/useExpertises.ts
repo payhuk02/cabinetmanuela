@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { FALLBACK_SECTIONS } from "@/data/expertiseSections";
 
 export type ExpertiseSection = { title: string; items: string[] };
 export type ExpertiseStep = { title: string; description: string };
@@ -29,7 +30,7 @@ export type ExpertiseRow = {
 // `Json` — we narrow them to their concrete shapes here.
 const normalize = (raw: Record<string, unknown>): ExpertiseRow => ({
   ...(raw as unknown as ExpertiseRow),
-  sections: Array.isArray(raw.sections) ? (raw.sections as ExpertiseSection[]) : [],
+  sections: (Array.isArray(raw.sections) && raw.sections.length > 0) ? (raw.sections as ExpertiseSection[]) : (FALLBACK_SECTIONS[raw.slug as string] || []),
   methodology: Array.isArray(raw.methodology) ? (raw.methodology as ExpertiseStep[]) : [],
   faq: Array.isArray(raw.faq) ? (raw.faq as ExpertiseFAQ[]) : [],
 });
