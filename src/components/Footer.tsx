@@ -199,39 +199,6 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Geo SEO links */}
-      <div className="border-t border-primary-foreground/10">
-        <div className="container-luxe py-8">
-          <p className="text-xs uppercase tracking-[0.2em] text-accent mb-4">
-            {lang === "fr" ? "Avocat à Paris & Abidjan" : "Lawyer in Paris & Abidjan"}
-          </p>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-primary-foreground/60">
-            {[
-              { to: "/avocat-droit-affaires-paris", label: "Avocat affaires Paris" },
-              { to: "/avocat-droit-affaires-abidjan", label: "Avocat affaires Abidjan" },
-              { to: "/avocat-ohada-cote-divoire", label: "Avocat OHADA Côte d'Ivoire" },
-              { to: "/avocat-droit-etrangers-france", label: "Droit des étrangers France" },
-              { to: "/avocat-immobilier-paris", label: "Immobilier Paris" },
-              { to: "/avocat-fiscalite-affaires-paris", label: "Fiscalité des affaires Paris" },
-              { to: "/avocat-arbitrage-ohada-paris", label: "Arbitrage OHADA Paris" },
-              { to: "/avocat-investissements-afrique-france", label: "Investissements Afrique-France" },
-              { to: "/avocat-france-cote-divoire", label: "France – Côte d'Ivoire" },
-              { to: "/avocat-recouvrement-creances-abidjan", label: "Recouvrement Abidjan" },
-              { to: "/avocat-creation-entreprise-cote-divoire", label: "Création entreprise CI" },
-              { to: "/avocat-penal-paris", label: "Pénaliste Paris" },
-              { to: "/avocat-droit-bancaire-financier-paris", label: "Bancaire & financier Paris" },
-              { to: "/avocat-procedures-collectives-paris", label: "Procédures collectives Paris" },
-              { to: "/avocat-petrolier-minier-abidjan", label: "Pétrolier & minier Abidjan" },
-            ].map((l) => (
-              <li key={l.to}>
-                <Link to={l.to} className="hover:text-accent transition-colors">
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
 
       <div className="border-t border-primary-foreground/10">
         <div className="container-luxe py-6 text-xs text-primary-foreground/50 flex flex-col md:flex-row justify-between gap-3 md:items-center">
