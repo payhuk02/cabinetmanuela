@@ -17,6 +17,7 @@ import type {
   ExpertiseStep,
   ExpertiseFAQ,
 } from "@/hooks/useExpertises";
+import { FALLBACK_SECTIONS } from "@/data/expertiseSections";
 
 const slugify = (s: string) =>
   s
@@ -42,7 +43,7 @@ export const ExpertisesAdmin = () => {
       setItems(
         (data ?? []).map((r: any) => ({
           ...r,
-          sections: r.sections ?? [],
+          sections: (Array.isArray(r.sections) && r.sections.length > 0) ? r.sections : (FALLBACK_SECTIONS[r.slug] || []),
           methodology: r.methodology ?? [],
           faq: r.faq ?? [],
         }))
