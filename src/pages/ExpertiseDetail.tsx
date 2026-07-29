@@ -140,9 +140,10 @@ const ExpertiseDetail = () => {
                   aria-hidden="true"
                   width={1920}
                   height={1080}
-                  className="absolute inset-0 w-full h-full object-cover scale-105 [filter:brightness(0.35)_contrast(1.1)_saturate(1.1)]"
+                  className="absolute inset-0 w-full h-full object-cover scale-105"
                 />
-                <div className="absolute inset-0 bg-night/50 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-black/30 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-t from-night via-night/60 to-transparent" />
               </>
             )}
             <div className="container-luxe relative flex flex-col h-full">
