@@ -110,9 +110,9 @@ export const Strengths = () => {
             return (
               <div
                 key={itemTitle}
-                className="group relative p-[1px] bg-gradient-to-b from-accent/40 via-accent/10 to-transparent transition-all duration-500 hover:from-accent hover:via-accent/40 hover:-translate-y-1"
+                className="group relative p-[1px] rounded-2xl bg-gradient-to-b from-accent/40 via-accent/10 to-transparent transition-all duration-500 hover:from-accent hover:via-accent/40 hover:-translate-y-1"
               >
-                <div className="relative h-full bg-white backdrop-blur-sm p-8 flex flex-col items-center text-center transition-colors duration-500 group-hover:bg-white/95">
+                <div className="relative h-full rounded-[15px] bg-white backdrop-blur-sm p-8 flex flex-col items-center text-center transition-colors duration-500 group-hover:bg-white/95 overflow-hidden">
                   {/* Subtle glow */}
                   <div
                     aria-hidden
