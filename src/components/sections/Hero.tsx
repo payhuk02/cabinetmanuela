@@ -10,6 +10,10 @@ import imgImmobilier from "@/assets/expertise-immobilier.jpg?responsive";
 import imgPenal from "@/assets/expertise-penal.jpg?responsive";
 import imgEtrangers from "@/assets/expertise-etrangers.jpg?responsive";
 import imgPetrolier from "@/assets/expertise-petrolier.jpg?responsive";
+import imgTravail from "@/assets/expertise-travail.png?responsive";
+import imgDommage from "@/assets/expertise-dommage.png?responsive";
+import imgFamille from "@/assets/expertise-famille.png?responsive";
+import imgAdmin from "@/assets/expertise-administratif.png?responsive";
 import imgPalaisDeJusticeParis from "@/assets/palais-de-justice-paris.jpg?responsive";
 import imgCabinetVangahPic from "@/assets/hero-cabinet-diabate.jpg?responsive";
 /* eslint-enable import/no-unresolved */
@@ -24,6 +28,10 @@ const picImmobilier = imgImmobilier as unknown as ResponsivePicture;
 const picPenal = imgPenal as unknown as ResponsivePicture;
 const picEtrangers = imgEtrangers as unknown as ResponsivePicture;
 const picPetrolier = imgPetrolier as unknown as ResponsivePicture;
+const picTravail = imgTravail as unknown as ResponsivePicture;
+const picDommage = imgDommage as unknown as ResponsivePicture;
+const picFamille = imgFamille as unknown as ResponsivePicture;
+const picAdmin = imgAdmin as unknown as ResponsivePicture;
 
 type SizeKey = "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
 
@@ -92,19 +100,28 @@ export const Hero = () => {
   const s1Accent = useText("hero.slide1.accent", "Barreau");
   const s2Eyebrow = useText("hero.slide2.eyebrow", "Expertise");
   const s2Title = useText("hero.slide2.title", "Droit des");
-  const s2Accent = useText("hero.slide2.accent", "étrangers");
+  const s2Accent = useText("hero.slide2.accent", "affaires");
   const s3Eyebrow = useText("hero.slide3.eyebrow", "Protection");
-  const s3Title = useText("hero.slide3.title", "Droit de");
-  const s3Accent = useText("hero.slide3.accent", "l'asile");
-  const s4Eyebrow = useText("hero.slide4.eyebrow", "Accompagnement");
-  const s4Title = useText("hero.slide4.title", "Droit de");
-  const s4Accent = useText("hero.slide4.accent", "la famille");
-  const s5Eyebrow = useText("hero.slide5.eyebrow", "Séparation");
-  const s5Title = useText("hero.slide5.title", "Procédure");
-  const s5Accent = useText("hero.slide5.accent", "de divorce");
-  const s6Eyebrow = useText("hero.slide6.eyebrow", "Protection");
+  const s3Title = useText("hero.slide3.title", "Droit du");
+  const s3Accent = useText("hero.slide3.accent", "travail");
+  const s4Eyebrow = useText("hero.slide4.eyebrow", "Assistance");
+  const s4Title = useText("hero.slide4.title", "Dommage");
+  const s4Accent = useText("hero.slide4.accent", "corporel");
+  const s5Eyebrow = useText("hero.slide5.eyebrow", "Accompagnement");
+  const s5Title = useText("hero.slide5.title", "Droit de la");
+  const s5Accent = useText("hero.slide5.accent", "famille");
+  const s6Eyebrow = useText("hero.slide6.eyebrow", "Défense");
   const s6Title = useText("hero.slide6.title", "Droit");
-  const s6Accent = useText("hero.slide6.accent", "des enfants");
+  const s6Accent = useText("hero.slide6.accent", "administratif");
+  const s7Eyebrow = useText("hero.slide7.eyebrow", "Protection");
+  const s7Title = useText("hero.slide7.title", "Droit des");
+  const s7Accent = useText("hero.slide7.accent", "étrangers");
+  const s8Eyebrow = useText("hero.slide8.eyebrow", "Investissement");
+  const s8Title = useText("hero.slide8.title", "Droit");
+  const s8Accent = useText("hero.slide8.accent", "immobilier");
+  const s9Eyebrow = useText("hero.slide9.eyebrow", "Afrique");
+  const s9Title = useText("hero.slide9.title", "Droit");
+  const s9Accent = useText("hero.slide9.accent", "OHADA");
 
   // Custom slide images uploaded from admin (overrides default responsive bundles).
   const s1Img = useText("hero.slide1.image", "");
@@ -173,11 +190,14 @@ export const Hero = () => {
   // (via `image` simple) ; sinon on garde le bundle responsive d'origine.
   const slides: Slide[] = [
     { image: s1Img || null, picture: s1Img ? undefined : palaisDeJusticeParis, eyebrow: s1Eyebrow, title: s1Title, accent: s1Accent, colorEyebrow: c1e, colorTitle: c1t, colorAccent: c1a, sizeEyebrow: sz1e, sizeTitle: sz1t },
-    { image: s2Img || null, picture: s2Img ? undefined : picEtrangers, eyebrow: s2Eyebrow, title: s2Title, accent: s2Accent, colorEyebrow: c2e, colorTitle: c2t, colorAccent: c2a, sizeEyebrow: sz2e, sizeTitle: sz2t },
-    { image: s3Img || null, picture: s3Img ? undefined : picPenal, eyebrow: s3Eyebrow, title: s3Title, accent: s3Accent, colorEyebrow: c3e, colorTitle: c3t, colorAccent: c3a, sizeEyebrow: sz3e, sizeTitle: sz3t },
-    { image: s4Img || null, picture: s4Img ? undefined : picAffaires, eyebrow: s4Eyebrow, title: s4Title, accent: s4Accent, colorEyebrow: c4e, colorTitle: c4t, colorAccent: c4a, sizeEyebrow: sz4e, sizeTitle: sz4t },
-    { image: s5Img || null, picture: s5Img ? undefined : picImmobilier, eyebrow: s5Eyebrow, title: s5Title, accent: s5Accent, colorEyebrow: c5e, colorTitle: c5t, colorAccent: c5a, sizeEyebrow: sz5e, sizeTitle: sz5t },
-    { image: s6Img || null, picture: s6Img ? undefined : picBancaire, eyebrow: s6Eyebrow, title: s6Title, accent: s6Accent, colorEyebrow: c6e, colorTitle: c6t, colorAccent: c6a, sizeEyebrow: sz6e, sizeTitle: sz6t },
+    { image: s2Img || null, picture: s2Img ? undefined : picAffaires, eyebrow: s2Eyebrow, title: s2Title, accent: s2Accent, colorEyebrow: c2e, colorTitle: c2t, colorAccent: c2a, sizeEyebrow: sz2e, sizeTitle: sz2t },
+    { image: s3Img || null, picture: s3Img ? undefined : picTravail, eyebrow: s3Eyebrow, title: s3Title, accent: s3Accent, colorEyebrow: c3e, colorTitle: c3t, colorAccent: c3a, sizeEyebrow: sz3e, sizeTitle: sz3t },
+    { image: s4Img || null, picture: s4Img ? undefined : picDommage, eyebrow: s4Eyebrow, title: s4Title, accent: s4Accent, colorEyebrow: c4e, colorTitle: c4t, colorAccent: c4a, sizeEyebrow: sz4e, sizeTitle: sz4t },
+    { image: s5Img || null, picture: s5Img ? undefined : picFamille, eyebrow: s5Eyebrow, title: s5Title, accent: s5Accent, colorEyebrow: c5e, colorTitle: c5t, colorAccent: c5a, sizeEyebrow: sz5e, sizeTitle: sz5t },
+    { image: s6Img || null, picture: s6Img ? undefined : picAdmin, eyebrow: s6Eyebrow, title: s6Title, accent: s6Accent, colorEyebrow: c6e, colorTitle: c6t, colorAccent: c6a, sizeEyebrow: sz6e, sizeTitle: sz6t },
+    { image: s7Img || null, picture: s7Img ? undefined : picEtrangers, eyebrow: s7Eyebrow, title: s7Title, accent: s7Accent, colorEyebrow: c7e, colorTitle: c7t, colorAccent: c7a, sizeEyebrow: sz7e, sizeTitle: sz7t },
+    { image: s8Img || null, picture: s8Img ? undefined : picImmobilier, eyebrow: s8Eyebrow, title: s8Title, accent: s8Accent, colorEyebrow: c8e, colorTitle: c8t, colorAccent: c8a, sizeEyebrow: sz8e, sizeTitle: sz8t },
+    { image: s9Img || null, picture: s9Img ? undefined : picOhada, eyebrow: s9Eyebrow, title: s9Title, accent: s9Accent, colorEyebrow: c9e, colorTitle: c9t, colorAccent: c9a, sizeEyebrow: sz9e, sizeTitle: sz9t },
   ];
 
   const handleEnded = () => {
