@@ -25,6 +25,7 @@ import { ChatbotAdmin } from "@/components/admin/ChatbotAdmin";
 import { EditorialAiAdmin } from "@/components/admin/EditorialAiAdmin";
 import { LandingPagesAdmin } from "@/components/admin/LandingPagesAdmin";
 import { BusinessCardAdmin } from "@/components/admin/BusinessCardAdmin";
+import { ThemeAdmin } from "@/components/admin/ThemeAdmin";
 
 import {
   LogOut,
@@ -45,6 +46,7 @@ import {
   Bot,
   Lock,
   QrCode,
+  Palette,
 } from "lucide-react";
 import {
   Sidebar,
@@ -96,7 +98,8 @@ type TabKey =
   | "editorial_ai"
   | "landing_pages"
   | "business_card"
-  | "users";
+  | "users"
+  | "theme";
 
 const NAV: { key: TabKey; label: string; icon: typeof FileText; section: string; adminOnly?: boolean }[] = [
   { key: "home", label: "Page d'accueil", icon: Home, section: "/" },
@@ -120,6 +123,7 @@ const NAV: { key: TabKey; label: string; icon: typeof FileText; section: string;
   { key: "seo_audit", label: "SEO — Audit interne", icon: Search, section: "/", adminOnly: true },
   { key: "logos", label: "Logos", icon: ImageIcon, section: "/" },
   { key: "content", label: "Textes globaux", icon: FileText, section: "/" },
+  { key: "theme", label: "Thème & Couleurs", icon: Palette, section: "/" },
   { key: "users", label: "Utilisateurs", icon: Shield, section: "/admin", adminOnly: true },
 ];
 
@@ -277,6 +281,7 @@ const Admin = () => {
           <main className="flex-1 p-4 md:p-8 overflow-x-hidden">
             {tab === "home" && <HomeAdmin />}
             {tab === "header_footer" && <HeaderFooterAdmin />}
+            {tab === "theme" && <ThemeAdmin />}
             {tab === "seo" && <SeoAdmin />}
             {tab === "seo_site" && isAdmin && <SeoSiteAdmin />}
             {tab === "seo_audit" && isAdmin && <SeoAuditAdmin />}

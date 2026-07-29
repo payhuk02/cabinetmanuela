@@ -13,6 +13,7 @@ import NotFound from "@/pages/NotFound";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { PageTransition } from "@/components/PageTransition";
 import { CustomCursor } from "@/components/CustomCursor";
+import { SiteThemeInjector } from "@/components/SiteThemeInjector";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ function Providers({ children }: { children: ReactNode }) {
                 <Chatbot />
                 <SiteSeoInjector />
                 <CustomCursor />
+                <SiteThemeInjector />
               </SiteDataProvider>
             </AuthProvider>
           </TooltipProvider>
