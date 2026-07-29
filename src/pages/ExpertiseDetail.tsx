@@ -25,7 +25,7 @@ const ExpertiseDetail = () => {
   const { data: expertise, loading } = useExpertise(slug);
   const { data: allExpertises } = useExpertises();
 
-  const heroImage = expertise ? expertise.image_url : null;
+  const heroImage = expertise ? (expertise.image_url || EXPERTISE_IMAGES[expertise.slug]) : null;
 
   const { canonical, alternates } = buildLangAlternates(
     `/expertises/${slug ?? ""}`,
@@ -133,14 +133,17 @@ const ExpertiseDetail = () => {
           {/* Hero with banner image */}
           <section className="relative pt-40 pb-24 md:pt-52 md:pb-32 bg-night text-primary-foreground overflow-hidden min-h-[480px] md:min-h-[560px]">
             {heroImage && (
-              <img
-                src={heroImage}
-                alt=""
-                aria-hidden="true"
-                width={1920}
-                height={1080}
-                className="absolute inset-0 w-full h-full object-cover scale-105 [filter:contrast(1.15)_saturate(1.1)_brightness(1.05)]"
-              />
+              <>
+                <img
+                  src={heroImage}
+                  alt=""
+                  aria-hidden="true"
+                  width={1920}
+                  height={1080}
+                  className="absolute inset-0 w-full h-full object-cover scale-105 [filter:brightness(0.35)_contrast(1.1)_saturate(1.1)]"
+                />
+                <div className="absolute inset-0 bg-night/50 mix-blend-multiply" />
+              </>
             )}
             <div className="container-luxe relative flex flex-col h-full">
               <Link
