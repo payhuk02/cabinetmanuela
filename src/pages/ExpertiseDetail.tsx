@@ -228,9 +228,9 @@ const ExpertiseDetail = () => {
             <section className="py-20 md:py-28 bg-night text-primary-foreground relative overflow-hidden">
               <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_70%_30%,hsl(var(--accent))_0%,transparent_55%)]" />
               <div className="container-luxe relative max-w-4xl">
-                <p className="eyebrow text-accent">Notre approche</p>
+                <p className="eyebrow text-blue-400">Notre approche</p>
                 <h2 className="mt-4 font-serif text-3xl md:text-4xl leading-tight">
-                  Une pratique <span className="text-accent">engagée</span>, au service de vos objectifs.
+                  Une pratique <span className="text-blue-400">engagée</span>, au service de vos objectifs.
                 </h2>
                 <p className="mt-8 text-base md:text-lg text-primary-foreground/85 leading-relaxed">
                   {expertise.approach}
