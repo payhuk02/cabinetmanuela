@@ -229,7 +229,7 @@ export const Footer = () => {
             href="https://wa.me/22668044697"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative z-40 font-semibold text-accent hover:underline transition-colors"
+            className="relative z-40 font-semibold text-blue-400 hover:text-blue-300 hover:underline transition-colors"
           >
             Edigit-Agence Digitale
           </a>
