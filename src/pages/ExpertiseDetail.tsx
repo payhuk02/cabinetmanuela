@@ -197,17 +197,17 @@ const ExpertiseDetail = () => {
                 {expertise.sections.map((section) => (
                   <div
                     key={section.title}
-                    className="border border-border p-8 md:p-10 hover:border-accent/40 transition-colors"
+                    className="bg-[#0c1c36] text-white rounded-3xl p-8 md:p-10 hover:shadow-[0_20px_50px_-20px_hsl(var(--accent)/0.3)] transition-all duration-300 border border-transparent hover:border-accent/30"
                   >
                     <p className="eyebrow text-accent">Domaine</p>
-                    <h2 className="mt-4 font-serif text-2xl md:text-3xl text-primary">
+                    <h2 className="mt-4 font-serif text-2xl md:text-3xl text-white">
                       {section.title}
                     </h2>
                     <ul className="mt-8 space-y-4">
                       {section.items.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" strokeWidth={1.5} />
-                          <span className="text-sm md:text-base text-muted-foreground">
+                          <span className="text-sm md:text-base text-white/80">
                             {item}
                           </span>
                         </li>
