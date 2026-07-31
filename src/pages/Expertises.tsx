@@ -7,11 +7,12 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useExpertises } from "@/hooks/useExpertises";
 import { getExpertiseIcon } from "@/data/expertiseIcons";
-import { EXPERTISE_IMAGES } from "@/data/expertiseImages";
+import { EXPERTISE_IMAGES, EXPERTISE_TO_HERO } from "@/data/expertiseImages";
 import { useSeo, buildLangAlternates } from "@/lib/seo";
 import { useBreadcrumbJsonLd } from "@/lib/useBreadcrumbJsonLd";
 import { useLang } from "@/i18n/LanguageContext";
 import { useText } from "@/hooks/useText";
+import { useSite } from "@/hooks/SiteDataContext";
 /* eslint-disable import/no-unresolved */
 import heroExpertisesPic from "@/assets/hero-expertises.jpg?responsive";
 /* eslint-enable import/no-unresolved */
@@ -22,6 +23,7 @@ const heroExpertisesPicture = heroExpertisesPic as unknown as ResponsivePicture;
 const Expertises = () => {
   const { data: expertises, loading } = useExpertises();
   const { lang } = useLang();
+  const { textOverrides } = useSite();
   const { canonical, alternates } = buildLangAlternates("/expertises", lang);
 
   const seoTitle = useText(
@@ -166,7 +168,9 @@ const Expertises = () => {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {expertises.map((e, idx) => {
                     const Icon = getExpertiseIcon(e.icon);
-                    const img = e.image_url || EXPERTISE_IMAGES[e.slug];
+                    const heroKey = EXPERTISE_TO_HERO[e.slug];
+                    const heroImg = heroKey ? textOverrides[`${heroKey}::${lang}`] : null;
+                    const img = e.image_url || heroImg || EXPERTISE_IMAGES[e.slug];
                     return (
                       <Link
                         key={e.id}

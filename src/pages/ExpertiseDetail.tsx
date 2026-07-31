@@ -13,9 +13,10 @@ import { ArrowLeft, ArrowRight, Check, HelpCircle } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { useExpertise, useExpertises } from "@/hooks/useExpertises";
 import { getExpertiseIcon } from "@/data/expertiseIcons";
-import { EXPERTISE_IMAGES } from "@/data/expertiseImages";
+import { EXPERTISE_IMAGES, EXPERTISE_TO_HERO } from "@/data/expertiseImages";
 import { useSeo, buildLangAlternates } from "@/lib/seo";
 import { useLang } from "@/i18n/LanguageContext";
+import { useSite } from "@/hooks/SiteDataContext";
 import { MethodologyTimeline } from "@/components/MethodologyTimeline";
 import { ExpertiseContactForm } from "@/components/ExpertiseContactForm";
 
@@ -24,8 +25,11 @@ const ExpertiseDetail = () => {
   const { lang } = useLang();
   const { data: expertise, loading } = useExpertise(slug);
   const { data: allExpertises } = useExpertises();
+  const { textOverrides } = useSite();
 
-  const heroImage = expertise ? (expertise.image_url || EXPERTISE_IMAGES[expertise.slug]) : null;
+  const heroKey = expertise ? EXPERTISE_TO_HERO[expertise.slug] : null;
+  const slideImg = heroKey ? textOverrides[`${heroKey}::${lang}`] : null;
+  const heroImage = expertise ? (expertise.image_url || slideImg || EXPERTISE_IMAGES[expertise.slug]) : null;
 
   const { canonical, alternates } = buildLangAlternates(
     `/expertises/${slug ?? ""}`,

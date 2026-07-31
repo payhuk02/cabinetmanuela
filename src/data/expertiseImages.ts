@@ -11,6 +11,17 @@ import imgDommage from "@/assets/expertise-dommage.png";
 import imgFamille from "@/assets/expertise-famille.png";
 import imgAdmin from "@/assets/expertise-administratif.png";
 
+export const EXPERTISE_TO_HERO: Record<string, string> = {
+  "droit-des-affaires": "hero.s2.image",
+  "droit-du-travail": "hero.s3.image",
+  "droit-du-dommage-corporel": "hero.s4.image",
+  "droit-de-la-famille": "hero.s5.image",
+  "droit-administratif-et-de-la-fonction-publique": "hero.s6.image",
+  "droit-des-etrangers": "hero.s7.image",
+  "droit-immobilier": "hero.s8.image",
+  "droit-ohada": "hero.s9.image",
+};
+
 export const EXPERTISE_IMAGES: Record<string, string> = {
   "droit-des-affaires": imgAffaires,
   "droit-bancaire-et-financier": imgBancaire,

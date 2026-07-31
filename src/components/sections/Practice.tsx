@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { AppointmentButton } from "@/components/AppointmentButton";
 import { useExpertises } from "@/hooks/useExpertises";
 import { getExpertiseIcon } from "@/data/expertiseIcons";
-import { EXPERTISE_IMAGES } from "@/data/expertiseImages";
+import { EXPERTISE_IMAGES, EXPERTISE_TO_HERO } from "@/data/expertiseImages";
 import { useText } from "@/hooks/useText";
 import { useLang } from "@/i18n/LanguageContext";
+import { useSite } from "@/hooks/SiteDataContext";
 
 export const Practice = () => {
   const { data: expertises, loading } = useExpertises();
+  const { textOverrides } = useSite();
   const { lang } = useLang();
 
   const eyebrow = useText(
@@ -65,7 +67,9 @@ export const Practice = () => {
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {expertises.map((e) => {
               const Icon = getExpertiseIcon(e.icon);
-              const img = e.image_url || EXPERTISE_IMAGES[e.slug];
+              const heroKey = EXPERTISE_TO_HERO[e.slug];
+              const heroImg = heroKey ? textOverrides[`${heroKey}::${lang}`] : null;
+              const img = e.image_url || heroImg || EXPERTISE_IMAGES[e.slug];
               return (
                 <Link
                   key={e.id}
