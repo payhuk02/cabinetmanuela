@@ -32,21 +32,18 @@ import { LazyMap } from "@/components/LazyMap";
 const SESSION_KEY = "contact_send_count";
 const MAX_SENDS_PER_SESSION = 3;
 
-const ADDRESS = "3 avenue des Ternes, 75017 Paris";
+const ADDRESS = "47 Rue Rémy-DUMONCEL 75014 PARIS";
 const PHONE = "+33 1 76 58 67 37";
 const WHATSAPP = "+33 6 68 44 10 49";
 const EMAIL = "contact@cabinet-diabate.com";
 const LINKEDIN = "https://www.linkedin.com/in/manuela-diabate";
-const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(
-  ADDRESS
-)}&output=embed`;
-const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  ADDRESS
-)}`;
 
 export const Contact = () => {
   const { t, lang } = useLang();
   const { contact } = useSite();
+  const address = contact?.address || ADDRESS;
+  const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+  const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
   const [loading, setLoading] = useState(false);
   const [ackOpen, setAckOpen] = useState(false);
   const [values, setValues] = useState({
@@ -58,7 +55,6 @@ export const Contact = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
-  const address = contact?.address || ADDRESS;
   const phone = contact?.phone || PHONE;
   const whatsapp = contact?.whatsapp_number || WHATSAPP;
   const email = contact?.email || EMAIL;

@@ -50,17 +50,14 @@ const PHONE = "06 59 76 42 51";
 const WHATSAPP = "06 59 76 42 51";
 const EMAIL = "manuela.diabate@mdi-avocats.com";
 const LINKEDIN = "https://www.linkedin.com/in/manuela-diabate";
-const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(
-  ADDRESS
-)}&output=embed`;
-const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  ADDRESS
-)}`;
 
 const Contact = () => {
   const { t, lang } = useLang();
   const { contact } = useSite();
   const { canonical, alternates } = buildLangAlternates("/contact", lang);
+  const addressStr = contact?.address || ADDRESS;
+  const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(addressStr)}&output=embed`;
+  const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressStr)}`;
 
   const seoTitle = useText("seo.contact.title", "Contact — Avocat à Paris | Cabinet Manuela DIABATE");
   const seoDescription = useText(
