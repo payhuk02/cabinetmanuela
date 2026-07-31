@@ -78,7 +78,7 @@ const LOGOS: LogoEntry[] = [
   },
   // Carrousel Hero — 9 slides d'arrière-plan affichées après l'animation d'encre.
   ...Array.from({ length: 9 }, (_, i) => ({
-    key: `hero.slide${i + 1}.image`,
+    key: `hero.s${i + 1}.image`,
     label: `Image carrousel Hero — Slide ${i + 1}`,
     description: `Image de fond du slide ${i + 1} du carrousel d'accueil. Format paysage (≥ 1920×1080) recommandé. Si vide, l'image par défaut est utilisée.`,
     fallback: "",
